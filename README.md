@@ -31,6 +31,7 @@ import Col, { Row } from "react-native-col";
 
 ```
 
+
 ### `dial` property
 
 The idea behind the dial notation, is to position the child components of `Row`/`Col` according to the position of the `dial` number on a phone dial pad.
@@ -44,9 +45,28 @@ The idea behind the dial notation, is to position the child components of `Row`/
 ```
 <img src='examples/row-5.jpg' />
 
+```js
+<Col dial={5} flex />
+```
+<img src="examples/col-5.jpg" />
+
+
 ### `space` property
 
-You can also use the `space` property to override `justifyContent`:
+You can also use the `space` property to override `justifyContent`.
+
+
+```js
+<Col dial={5} space="between" flex />
+```
+<img src="examples/col-5-between.jpg" />
+
+
+```js
+<Col dial={5} space="around" flex />
+```
+<img src="examples/col-5-around.jpg" />
+
 
 ### `stretch` property
 
@@ -71,22 +91,3 @@ Use reverse to change `flexDirection` from `row` to `row-reverse` or from `colum
 <Row reverse />
 <Col reverse />
 ```
-
-## Examples
-
-```js
-<Col dial={5} flex />
-```
-<img src="examples/col-5.jpg" width="180" />
-
-
-```js
-<Col dial={5} space="between" flex />
-```
-<img src="examples/col-5-between.jpg" width="180" />
-
-
-```js
-<Col dial={5} space="around" flex />
-```
-<img src="examples/col-5-around.jpg" width="180" />
