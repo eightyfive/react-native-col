@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default function({ dial, flex, space, stretch, reverse, ...view }, dir) {
   const style = dial(dir, dial, flex, space, stretch, reverse);
 
-  return [view, style];
+  return [view, createStyleSheet(style)];
 }
 
 export function dial(dir, dial, flex, space, stretch, reverse) {
@@ -59,7 +59,7 @@ function dialY(dial) {
 
 const cache = {};
 
-export function getStyle(style) {
+function createStyleSheet(style) {
   const key = getCacheKey(style);
 
   if (typeof cache[key] === 'undefined') {
