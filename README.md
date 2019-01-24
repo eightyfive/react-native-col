@@ -43,29 +43,29 @@ The idea behind the dial notation, is to position the child components of `Row`/
   <View style={styles.squareBlue} />
 </Row>
 ```
-<img src='examples/row-5.jpg' />
+<img src="examples/row-5.jpg" width="180" />
 
 ```js
 <Col dial={5} flex />
 ```
-<img src="examples/col-5.jpg" />
+<img src="examples/col-5.jpg" width="180" />
 
 
 ### `space` property
 
-You can also use the `space` property to override `justifyContent`.
+You can also use the `space` property to override `justifyContent`:
 
 
 ```js
 <Col dial={5} space="between" flex />
 ```
-<img src="examples/col-5-between.jpg" />
+<img src="examples/col-5-between.jpg" width="180" />
 
 
 ```js
 <Col dial={5} space="around" flex />
 ```
-<img src="examples/col-5-around.jpg" />
+<img src="examples/col-5-around.jpg" width="180" />
 
 
 ### `stretch` property
