@@ -36,9 +36,13 @@ import Col, { Row } from "react-native-col";
 The idea behind the dial notation, is to position the child components of `Row`/`Col` according to the position of the `dial` number on a phone dial pad.
 
 ```js
-<Row dial={5} flex />
+<Row dial={5} flex>
+  <View style={styles.squareBlueLighter} />
+  <View style={styles.squareBlueLight} />
+  <View style={styles.squareBlue} />
+</Row>
 ```
-<img src='examples/row-5.jpg' width="180" />
+<img src='examples/row-5.jpg' />
 
 ### `space` property
 
