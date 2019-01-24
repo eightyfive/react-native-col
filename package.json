@@ -1,0 +1,40 @@
+{
+  "name": "react-native-col",
+  "version": "0.1.0",
+  "description": "Easy React Native Flexbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eightyfive/react-native-col.git"
+  },
+  "keywords": [
+    "react-native",
+    "flexbox",
+    "column",
+    "col",
+    "row",
+    "dial"
+  ],
+  "author": "Benoit Sagols <benoit.sagols@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eightyfive/react-native-col/issues"
+  },
+  "homepage": "https://github.com/eightyfive/react-native-col#readme",
+  "dependencies": {
+    "react-native": "^0.57.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-native": "^4.0.1",
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
