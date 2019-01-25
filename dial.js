@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export default function({ dial, flex, space, stretch, reverse, ...view }, dir) {
-  const style = dial(dir, dial, flex, space, stretch, reverse);
+  const style = getStyle(dir, dial, flex, space, stretch, reverse);
 
   return [view, createStyleSheet(style)];
 }
 
-export function dial(dir, dial, flex, space, stretch, reverse) {
+export function getStyle(dir, dial, flex, space, stretch, reverse) {
   if (dial && (dial < 1 || dial > 9)) {
     throw new TypeError('`dial` prop must be between 1 and 9');
   }
