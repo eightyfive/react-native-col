@@ -1,13 +1,29 @@
 import { StyleSheet } from 'react-native';
 
-export default function dial(props, dir) {
+export function getColProps(props) {
+  return getProps('column', props);
+}
+
+export function getRowProps(props) {
+  return getProps('row', props);
+}
+
+export function dialCol(dial) {
+  return getStyle('column', dial);
+}
+
+export function dialRow(dial) {
+  return getStyle('row', dial);
+}
+
+function getProps(dir, props) {
   const { dial, flex, space, stretch, reverse, color, ...view } = props;
   const style = getStyle(dir, dial, flex, space, stretch, reverse, color);
 
   return [view, createStyleSheet(style)];
 }
 
-export function getStyle(dir, dial, flex, space, stretch, reverse, color) {
+function getStyle(dir, dial, flex, space, stretch, reverse, color) {
   if (dial && (dial < 1 || dial > 9)) {
     throw new TypeError('`dial` prop must be between 1 and 9');
   }
