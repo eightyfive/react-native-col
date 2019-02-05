@@ -91,3 +91,13 @@ Use reverse to change `flexDirection` from `row` to `row-reverse` or from `colum
 <Row reverse />
 <Col reverse />
 ```
+
+## Credits
+
+*ALL* credit goes to the [`react-native-row`](https://github.com/hyrwork/react-native-row) library.
+
+The main difference with [`react-native-row`](https://github.com/hyrwork/react-native-row) is the separation of the margin/padding properties into a much more powerful standalone library `react-native-spacesheet`:
+
+https://github.com/eightyfive/react-native-spacesheet
+
+So `react-native-col` is just a cleaner / more focused version (dial only) of [`react-native-row`](https://github.com/hyrwork/react-native-row).
