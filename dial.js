@@ -17,14 +17,14 @@ export function dialRow(dial) {
 }
 
 function getProps(dir, props) {
-  const { dial, flex, space, stretch, reverse, color, ...view } = props;
+  const { dial = 1, flex, space, stretch, reverse, color, ...view } = props;
   const style = getStyle(dir, dial, flex, space, stretch, reverse, color);
 
   return [view, createStyleSheet(style)];
 }
 
 function getStyle(dir, dial, flex, space, stretch, reverse, color) {
-  if (dial && (dial < 1 || dial > 9)) {
+  if (dial < 1 || dial > 9) {
     throw new TypeError('`dial` prop must be between 1 and 9');
   }
 
