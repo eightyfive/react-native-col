@@ -14,87 +14,93 @@ $ yarn add react-native-col
 
 ```js
 // Before
-<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-start" }} />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-start", flex: true }} />
 
 // After
-<Row dial={3} />
+<Row3 />
 ```
 
 ## Documentation
 
-### `Col` (`View`) & `Row` components
+### The `dial` property
 
-Import the `View` component of this package as `Col` for explicitness versus `Row` component:
-
-```js
-import Col, { Row } from "react-native-col";
-
-```
-
-
-### `dial` property
+Every component exposed, includes a `dial` "property" in its name: `Col5`, `Row4`, etc...
 
 The idea behind the dial notation, is to position the child components of `Row`/`Col` according to the position of the `dial` number on a phone dial pad.
 
 ```js
-<Row dial={5} flex>
-  <View style={styles.squareBlueLighter} />
-  <View style={styles.squareBlueLight} />
-  <View style={styles.squareBlue} />
-</Row>
+<Row5>
+	<View style={styles.squareBlueLighter} />
+	<View style={styles.squareBlueLight} />
+	<View style={styles.squareBlue} />
+</Row5>
 ```
+
 <img src="examples/row-5.jpg" width="180" />
 
 ```js
-<Col dial={5} flex />
+<Col5 />
 ```
+
 <img src="examples/col-5.jpg" width="180" />
 
+### `Col`
 
-### `space` property
-
-You can also use the `space` property to override `justifyContent`:
-
+`Col<dial>` is equivalent to a react-native `View` with Y main axis and `flex: true`.
 
 ```js
-<Col dial={5} space="between" flex />
-```
-<img src="examples/col-5-between.jpg" width="180" />
+import { Col3 } from 'react-native-col';
 
-
-```js
-<Col dial={5} space="around" flex />
-```
-<img src="examples/col-5-around.jpg" width="180" />
-
-
-### `stretch` property
-
-Use the `stretch` property to override `alignItems`:
-
-```js
-<Col dial={5} stretch flex />
+<Col3 />
+<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end", flex: true }} />
 ```
 
-### `flex` property
+_NB_: All styles are generated and _not_ passed inline.
+
+### `Row`
+
+`Row<dial>` is equivalent to a react-native `View` with X main axis and `flex: true`.
 
 ```js
-<Row flex /> // flex = 1 by default
-<Row flex={3} />
+import { Row6 } from 'react-native-col';
+
+<Row6 />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: true }} />
 ```
 
-### `reverse` property
+### `Yiew`
 
-Use reverse to change `flexDirection` from `row` to `row-reverse` or from `column` to `column-reverse`:
+Stands for "Y View" (sic).
+
+It is basically the same as the `Col<dial>` component but _without_ `flex: true`.
+
+`Yiew<dial>` is equivalent to a react-native `View` with Y main axis.
 
 ```js
-<Row reverse />
-<Col reverse />
+import { Yiew3 } from 'react-native-col';
+
+<Yiew3 />
+<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end" }} />
+```
+
+### `Xiew`
+
+Stands for "X View" (sic).
+
+It is basically the same as the `Row<dial>` component but _without_ `flex: true`.
+
+`Yiew<dial>` is equivalent to a react-native `View` with Y main axis.
+
+```js
+import { Yiew6 } from 'react-native-col';
+
+<Yiew6 />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center" }} />
 ```
 
 ## Credits
 
-*ALL* credit goes to the [`react-native-row`](https://github.com/hyrwork/react-native-row) library.
+_ALL_ credit goes to the [`react-native-row`](https://github.com/hyrwork/react-native-row) library.
 
 The main difference with [`react-native-row`](https://github.com/hyrwork/react-native-row) is the separation of the margin/padding properties into a much more powerful standalone library `react-native-spacesheet`:
 
