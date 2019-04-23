@@ -1,16 +1,36 @@
 import React from 'react';
 import { View } from 'react-native';
-//
-import { getColProps, getRowProps } from './dial';
+import dial from 'react-native-spacesheet/dial';
 
-export function Row(props) {
-  const [view, style] = getRowProps(props);
+const styles = {};
 
-  return <View {...view} style={[style, view.style]} />;
+for (let i = 1; i < 10; i++) {
+	const yiew = dial('column', i);
+	const xiew = dial('row', i);
+
+	styles[`col${i}`] = { ...yiew, flex: true };
+	styles[`row${i}`] = { ...xiew, flex: true };
+
+	styles[`yiew${i}`] = yiew;
+	styles[`xiew${i}`] = xiew;
 }
 
-export default function Col(props) {
-  const [view, style] = getColProps(props);
+const sheets = StyleSheet.create(styles);
 
-  return <View {...view} style={[style, view.style]} />;
+const makeView = name => ({
+	[name]: ({ style, ...rest }) => (
+		<View {...rest} style={[sheets[name.toLowerCase()], style]} />
+	),
+});
+
+const { assign } = Object;
+const Views = {};
+
+for (let i = 1; i < 10; i++) {
+	assign(Views, makeView(`Col${i}`));
+	assign(Views, makeView(`Row${i}`));
+	assign(Views, makeView(`Yiew${i}`));
+	assign(Views, makeView(`Xiew${i}`));
 }
+
+export default Views;

@@ -1,6 +1,6 @@
 {
   "name": "react-native-col",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Easy React Native Flexbox",
   "main": "index.js",
   "scripts": {
@@ -24,19 +24,19 @@
     "url": "https://github.com/eightyfive/react-native-col/issues"
   },
   "homepage": "https://github.com/eightyfive/react-native-col#readme",
-
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react-native": "^4.0.1",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "react-native": "^0.59.5"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "dependencies": {
+    "react-native-spacesheet": "^0.2.3"
   }
 }
