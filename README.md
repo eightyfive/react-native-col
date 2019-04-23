@@ -68,36 +68,6 @@ import { Row6 } from 'react-native-col';
 <View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: true }} />
 ```
 
-### `Yiew`
-
-Stands for "Y View" (sic).
-
-It is basically the same as the `Col<dial>` component but _without_ `flex: true`.
-
-`Yiew<dial>` is equivalent to a react-native `View` with Y main axis.
-
-```js
-import { Yiew3 } from 'react-native-col';
-
-<Yiew3 />
-<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end" }} />
-```
-
-### `Xiew`
-
-Stands for "X View" (sic).
-
-It is basically the same as the `Row<dial>` component but _without_ `flex: true`.
-
-`Yiew<dial>` is equivalent to a react-native `View` with Y main axis.
-
-```js
-import { Yiew6 } from 'react-native-col';
-
-<Yiew6 />
-<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center" }} />
-```
-
 ## Credits
 
 _ALL_ credit goes to the [`react-native-row`](https://github.com/hyrwork/react-native-row) library.
