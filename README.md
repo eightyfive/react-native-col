@@ -21,7 +21,7 @@ import { View } from 'react-native';
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
-    flex: true,
+    flex: 1,
   }}
 />;
 
