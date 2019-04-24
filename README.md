@@ -1,8 +1,8 @@
 # react-native-col
 
-A wrapper around the [`react-native`](https://github.com/facebook/react-native) `<View/>` component enabling concise assignment of flexbox layout properties.
+A wrapper around [`react-native`](https://github.com/facebook/react-native) `<View />` enabling quick [Flexbox](https://facebook.github.io/react-native/docs/flexbox) positioning.
 
-The idea is to keep JSX as clean as possible, while removing the need to manage stylesheet declarations for common positioning needs.
+The idea is to keep JSX as clean and concise as possible, while also providing some nice semantic.
 
 ## Installation
 
@@ -14,87 +14,32 @@ $ yarn add react-native-col
 
 ```js
 // Before
-<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-start", flex: true }} />
+import { View } from 'react-native';
+
+<View
+	style={{
+		flexDirection: 'row',
+		justifyContent: 'flex-end',
+		alignItems: 'flex-start',
+		flex: true,
+	}}
+/>;
 
 // After
-<Row3 />
+import { Row3 } from 'react-native-col';
+
+<Row3 />;
 ```
 
 ## Documentation
 
-### The `dial` "property"
+### The `dial` notation
 
 The package exposes 2 types of components: `Col<dial>` and `Row<dial>`.
 
-The `dial` "property" is included in the name of the component instead of passing it as a normal React `property`: `Col5`, `Row4`, etc...
+The `dial` "property" is included **in the name of the component**: `Col5`, `Row4`, etc...
 
-The idea behind the dial notation, is to position the child components of `Row`/`Col` according to the position of the dial number on a phone pad. Hence the `dial` "property" must be between `1` and `9` (inclusive).
-
-Let's see some examples from the Flexbox [official documentation](https://facebook.github.io/react-native/docs/flexbox).
-
-[Flex Direction](https://facebook.github.io/react-native/docs/flexbox#flex-direction):
-
-```js
-<View style={{flex: 1, flexDirection: 'row'}}>
-	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-</View>
-
-// Becomes
-<Row1>
-	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-</Row1>
-```
-
-[Justify Content](https://facebook.github.io/react-native/docs/flexbox#justify-content):
-
-```js
-<View style={{
-	flex: 1,
-	flexDirection: 'column',
-	justifyContent: 'space-between',
-}}>
-	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-</View>
-
-// Becomes
-<Col style={{ justifyContent: 'space-between' }}>
-	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-</Col>
-```
-
-_Note_: `Col1` & `Row1` are aliased `Col` & `Row`.
-
-[Align Items](https://facebook.github.io/react-native/docs/flexbox#align-items):
-
-```js
-<View style={{
-	flex: 1,
-	flexDirection: 'column',
-	justifyContent: 'center',
-	alignItems: 'stretch',
-}}>
-	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-	<View style={{height: 50, backgroundColor: 'skyblue'}} />
-	<View style={{height: 100, backgroundColor: 'steelblue'}} />
-</View>
-
-// Becomes
-<Col4 style={{ alignItems: 'stretch' }}>
-	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-	<View style={{height: 50, backgroundColor: 'skyblue'}} />
-	<View style={{height: 100, backgroundColor: 'steelblue'}} />
-</Col4>
-```
-
-And some more examples:
+Think of `dial` as a phone pad. Child components will align according to the dial number:
 
 ```js
 <Row5 />
@@ -110,25 +55,29 @@ And some more examples:
 
 ### `Col<dial>`
 
-`Col<dial>` is a React Native `View` with Y main axis and `flex: 1`.
+`Col<dial>` is a [`View`](https://facebook.github.io/react-native/docs/view) with `flexDirection: 'column'` and `flex: 1`.
 
 ```js
 import { Col3 } from 'react-native-col';
 
 <Col3 />
+
+// Equivalent
 <View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end", flex: 1 }} />
 ```
 
-_NB_: All styles are generated and _not_ passed inline.
+_NB_: All styles are pre-generated and _not_ passed inline.
 
 ### `Row<dial>`
 
-`Row<dial>` is a React Native `View` with X main axis and `flex: 1`.
+`Row<dial>` is a [`View`](https://facebook.github.io/react-native/docs/view) with `flexDirection: 'row'` and `flex: 1`.
 
 ```js
 import { Row6 } from 'react-native-col';
 
 <Row6 />
+
+// Equivalent
 <View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: 1 }} />
 ```
 
