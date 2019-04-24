@@ -22,18 +22,82 @@ $ yarn add react-native-col
 
 ## Documentation
 
-### The `dial` property
+### The `dial` "property"
 
-Every component exposed, includes a `dial` "property" in its name: `Col5`, `Row4`, etc...
+The package exposes 2 types of components: `Col<dial>` and `Row<dial>`.
 
-The idea behind the dial notation, is to position the child components of `Row`/`Col` according to the position of the `dial` number on a phone dial pad.
+The `dial` "property" is included in the name of the component instead of passing it as a normal React `property`: `Col5`, `Row4`, etc...
+
+The idea behind the dial notation, is to position the child components of `Row`/`Col` according to the position of the dial number on a phone pad. Hence the `dial` "property" must be between `1` and `9` (inclusive).
+
+Let's see some examples from the Flexbox [official documentation](https://facebook.github.io/react-native/docs/flexbox).
+
+[Flex Direction](https://facebook.github.io/react-native/docs/flexbox#flex-direction):
 
 ```js
-<Row5>
-	<View style={styles.squareBlueLighter} />
-	<View style={styles.squareBlueLight} />
-	<View style={styles.squareBlue} />
-</Row5>
+<View style={{flex: 1, flexDirection: 'row'}}>
+	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+</View>
+
+// Becomes
+<Row1>
+	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+</Row1>
+```
+
+[Justify Content](https://facebook.github.io/react-native/docs/flexbox#justify-content):
+
+```js
+<View style={{
+	flex: 1,
+	flexDirection: 'column',
+	justifyContent: 'space-between',
+}}>
+	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+</View>
+
+// Becomes
+<Col style={{ justifyContent: 'space-between' }}>
+	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+	<View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+</Col>
+```
+
+_Note_: `Col1` & `Row1` are aliased `Col` & `Row`.
+
+[Align Items](https://facebook.github.io/react-native/docs/flexbox#align-items):
+
+```js
+<View style={{
+	flex: 1,
+	flexDirection: 'column',
+	justifyContent: 'center',
+	alignItems: 'stretch',
+}}>
+	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+	<View style={{height: 50, backgroundColor: 'skyblue'}} />
+	<View style={{height: 100, backgroundColor: 'steelblue'}} />
+</View>
+
+// Becomes
+<Col4 style={{ alignItems: 'stretch' }}>
+	<View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+	<View style={{height: 50, backgroundColor: 'skyblue'}} />
+	<View style={{height: 100, backgroundColor: 'steelblue'}} />
+</Col4>
+```
+
+And some more examples:
+
+```js
+<Row5 />
 ```
 
 <img src="examples/row-5.jpg" width="180" />
@@ -44,28 +108,28 @@ The idea behind the dial notation, is to position the child components of `Row`/
 
 <img src="examples/col-5.jpg" width="180" />
 
-### `Col`
+### `Col<dial>`
 
-`Col<dial>` is equivalent to a react-native `View` with Y main axis and `flex: true`.
+`Col<dial>` is a React Native `View` with Y main axis and `flex: 1`.
 
 ```js
 import { Col3 } from 'react-native-col';
 
 <Col3 />
-<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end", flex: true }} />
+<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end", flex: 1 }} />
 ```
 
 _NB_: All styles are generated and _not_ passed inline.
 
-### `Row`
+### `Row<dial>`
 
-`Row<dial>` is equivalent to a react-native `View` with X main axis and `flex: true`.
+`Row<dial>` is a React Native `View` with X main axis and `flex: 1`.
 
 ```js
 import { Row6 } from 'react-native-col';
 
 <Row6 />
-<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: true }} />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: 1 }} />
 ```
 
 ## Credits
