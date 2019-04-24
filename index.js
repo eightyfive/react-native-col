@@ -18,9 +18,9 @@ for (let i = 1; i < 10; i++) {
 
 const sheets = StyleSheet.create(styles);
 
-const makeView = name => ({
+const makeView = (name, sheet = null) => ({
 	[name]: ({ style, ...rest }) => (
-		<View {...rest} style={[sheets[name], style]} />
+		<View {...rest} style={[sheet || sheets[name], style]} />
 	),
 });
 
@@ -30,5 +30,9 @@ for (let i = 1; i < 10; i++) {
 	assign(Views, makeView(`Col${i}`));
 	assign(Views, makeView(`Row${i}`));
 }
+
+// Aliases
+assign(Views, makeView('Col', sheets.Col1);
+assign(Views, makeView('Row', sheets.Row1);
 
 export default Views;
