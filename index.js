@@ -1,38 +1,27 @@
 import React from 'react';
 import { View } from 'react-native';
-import dial from 'react-native-spacesheet/dial';
+//
+import sheets from './sheets';
 
-const { assign } = Object;
+const makeView = name => ({ style, ...rest }) => (
+  <View {...rest} style={[sheets[name], style]} />
+);
 
-const styles = {};
+const Col = makeView('Col');
 
-for (let i = 1; i < 10; i++) {
-  const col = dial('column', i);
-  const row = dial('row', i);
-
-  assign(styles, {
-    [`Col${i}`]: { ...col, flex: 1 },
-    [`Row${i}`]: { ...row, flex: 1 },
-  });
-}
-
-const sheets = StyleSheet.create(styles);
-
-const makeView = (name, sheet = null) => ({
-  [name]: ({ style, ...rest }) => (
-    <View {...rest} style={[sheet || sheets[name], style]} />
-  ),
-});
-
-const Views = {};
+export const Row = makeView('Row');
 
 for (let i = 1; i < 10; i++) {
-  assign(Views, makeView(`Col${i}`));
-  assign(Views, makeView(`Row${i}`));
+  Col[`${i}`] = makeView(`Col${i}`);
+  Row[`${i}`] = makeView(`Row${i}`);
 }
 
-// Aliases
-assign(Views, makeView('Col', sheets.Col1));
-assign(Views, makeView('Row', sheets.Row1));
+Col['17'] = makeView('Col17');
+Col['28'] = makeView('Col28');
+Col['39'] = makeView('Col39');
 
-export default Views;
+Row['13'] = makeView('Row13');
+Row['46'] = makeView('Row46');
+Row['79'] = makeView('Row79');
+
+export default Col;
