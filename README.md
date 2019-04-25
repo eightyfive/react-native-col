@@ -87,7 +87,7 @@ import { Col, Row } from 'react-native-col';
 
 ### `space-between`
 
-There are some additional `Col<dial>`/`Row<dial>` views describing common use cases of `justifyContent: 'space-between'`:
+The package also exposes additional `Col<dial>`/`Row<dial>` views describing common use cases of `justifyContent: 'space-between'`:
 
 ```js
 import { Col17, Col28, Col39 } from 'react-native-col';
