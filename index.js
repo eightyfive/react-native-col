@@ -7,29 +7,35 @@ const makeView = name => ({ style, ...rest }) => (
   <View {...rest} style={[sheets[name], style]} />
 );
 
-const Views = {
-  Col: View,
-  Row: makeView('Row'),
+export const Col = View;
+export const Row = makeView('Row');
 
-  Col17: makeView('Col17'),
-  Col28: makeView('Col28'),
-  Col39: makeView('Col39'),
+export const Col1 = makeView('Col1');
+export const Col2 = makeView('Col2');
+export const Col3 = makeView('Col3');
+export const Col4 = makeView('Col4');
+export const Col5 = makeView('Col5');
+export const Col6 = makeView('Col6');
+export const Col7 = makeView('Col7');
+export const Col8 = makeView('Col8');
+export const Col9 = makeView('Col9');
 
-  Row13: makeView('Row13'),
-  Row46: makeView('Row46'),
-  Row79: makeView('Row79'),
-};
+export const Row1 = makeView('Row1');
+export const Row2 = makeView('Row2');
+export const Row3 = makeView('Row3');
+export const Row4 = makeView('Row4');
+export const Row5 = makeView('Row5');
+export const Row6 = makeView('Row6');
+export const Row7 = makeView('Row7');
+export const Row8 = makeView('Row8');
+export const Row9 = makeView('Row9');
 
-const { assign } = Object;
+export const Col17 = makeView('Col17');
+export const Col28 = makeView('Col28');
+export const Col39 = makeView('Col39');
 
-for (let i = 1; i < 10; i++) {
-  const col = `Col${i}`;
-  const row = `Row${i}`;
+export const Row13 = makeView('Row13');
+export const Row46 = makeView('Row46');
+export const Row79 = makeView('Row79');
 
-  assign(Views, {
-    [col]: makeView(col),
-    [row]: makeView(row),
-  });
-}
-
-export default Views;
+export default Col;
