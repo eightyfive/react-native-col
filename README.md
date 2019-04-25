@@ -26,80 +26,92 @@ import { View } from 'react-native';
 />;
 
 // After
-import { Row } from 'react-native-col';
+import { Row3 } from 'react-native-col';
 
-<Row.3 />;
+<Row3 />;
 ```
 
 ## Documentation
 
 ### The `dial` notation
 
+The package exposes 2 types of components: `Col<dial>` and `Row<dial>`.
+
+The dial "property" is included **in the name of the component**: Col5, Row4, etc...
+
 Think of `dial` as a phone pad. Child components will align according to the dial number:
 
 ```js
-<Row.5 />
+<Row5 />
 ```
 
 <img src="examples/row-5.jpg" width="180" />
 
 ```js
-<Col.5 />
+<Col5 />
 ```
 
 <img src="examples/col-5.jpg" width="180" />
 
-### `Col`
+### `Col<dial>`
 
 ```js
-import Col from 'react-native-col';
+import { Col3 } from 'react-native-col';
 
-<Col.3 />
-
-// Equivalent
+<Col3 />
 <View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end", flex: 1 }} />
 ```
 
 _NB_: All styles are pre-generated and _not_ passed inline.
 
-### `Row`
+### `Row<dial>`
 
 ```js
-import { Row } from 'react-native-col';
+import { Row6 } from 'react-native-col';
 
-<Row.6 />
-
-// Equivalent
+<Row6 />
 <View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: 1 }} />
 ```
 
-## `space-between`
-
-There are some additional sub-`Col`/`Row` views to deal with common use case of `justifyContent: 'space-between'`:
+### `Col`/`Row` (without `flex: 1`)
 
 ```js
-import Col from 'react-native-col';
+import { Col, Row } from 'react-native-col';
 
-<Col.17 />
+<Col />
+<View />
+
+<Row />
+<View style={{ flexDirection: "row" }} />
+```
+
+### `space-between`
+
+There are some additional `Col<dial>`/`Row<dial>` views describing common use cases of `justifyContent: 'space-between'`:
+
+```js
+import { Col17, Col28, Col39 } from 'react-native-col';
+
+<Col17 />
 <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start", flex: 1 }} />
 
-<Col.28 />
+<Col28 />
 <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "center", flex: 1 }} />
 
-<Col.39 />
+<Col39 />
 <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-end", flex: 1 }} />
 ```
 
 ```js
-import { Row } from 'react-native-col';
+import { Row13, Row46, Row79 } from 'react-native-col';
 
-<Row.13 />
+<Row13 />
 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", flex: 1 }} />
 
-<Row.46 />
+<Row46 />
 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", flex: 1 }} />
 
-<Row.79 />
+<Row79 />
 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end", flex: 1 }} />
 ```
 

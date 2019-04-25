@@ -7,21 +7,29 @@ const makeView = name => ({ style, ...rest }) => (
   <View {...rest} style={[sheets[name], style]} />
 );
 
-const Col = makeView('Col');
+const Views = {
+  Col: View,
+  Row: makeView('Row'),
 
-export const Row = makeView('Row');
+  Col17: makeView('Col17'),
+  Col28: makeView('Col28'),
+  Col39: makeView('Col39'),
+
+  Row13: makeView('Row13'),
+  Row46: makeView('Row46'),
+  Row79: makeView('Row79'),
+};
+
+const { assign } = Object;
 
 for (let i = 1; i < 10; i++) {
-  Col[`${i}`] = makeView(`Col${i}`);
-  Row[`${i}`] = makeView(`Row${i}`);
+  const col = `Col${i}`;
+  const row = `Row${i}`;
+
+  assign(Views, {
+    [col]: makeView(col),
+    [row]: makeView(row),
+  });
 }
 
-Col['17'] = makeView('Col17');
-Col['28'] = makeView('Col28');
-Col['39'] = makeView('Col39');
-
-Row['13'] = makeView('Row13');
-Row['46'] = makeView('Row46');
-Row['79'] = makeView('Row79');
-
-export default Col;
+export default Views;

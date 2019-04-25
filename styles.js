@@ -3,7 +3,6 @@ import dial from 'react-native-spacesheet/dial';
 const { assign } = Object;
 
 const styles = {
-  Col: dial('column', 1),
   Row: dial('row', 1),
   // space-between (Col)
   Col17: {
