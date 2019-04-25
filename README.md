@@ -21,7 +21,6 @@ import { View } from 'react-native';
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
-    flex: 1,
   }}
 />;
 
@@ -59,7 +58,7 @@ Think of `dial` as a phone pad. Child components will align according to the dia
 import { Col3 } from 'react-native-col';
 
 <Col3 />
-<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end", flex: 1 }} />
+<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end" }} />
 ```
 
 _NB_: All styles are pre-generated and _not_ passed inline.
@@ -70,19 +69,17 @@ _NB_: All styles are pre-generated and _not_ passed inline.
 import { Row6 } from 'react-native-col';
 
 <Row6 />
-<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center", flex: 1 }} />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center" }} />
 ```
 
-### `Col`/`Row` (without `flex: 1`)
+### `Col`/`Row`
 
 ```js
 import { Col, Row } from 'react-native-col';
 
-<Col />
-<View />
+<Col /> = <View />
 
-<Row />
-<View style={{ flexDirection: "row" }} />
+<Row /> = <View style={{ flexDirection: "row" }} />
 ```
 
 ### `space-between`
@@ -93,26 +90,26 @@ The package also exposes additional `Col<dial>`/`Row<dial>` views describing com
 import { Col17, Col28, Col39 } from 'react-native-col';
 
 <Col17 />
-<View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start", flex: 1 }} />
+<View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start" }} />
 
 <Col28 />
-<View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "center", flex: 1 }} />
+<View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "center" }} />
 
 <Col39 />
-<View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-end", flex: 1 }} />
+<View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-end" }} />
 ```
 
 ```js
 import { Row13, Row46, Row79 } from 'react-native-col';
 
 <Row13 />
-<View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", flex: 1 }} />
+<View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }} />
 
 <Row46 />
-<View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", flex: 1 }} />
+<View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} />
 
 <Row79 />
-<View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end", flex: 1 }} />
+<View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end" }} />
 ```
 
 ## Credits
