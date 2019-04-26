@@ -7,35 +7,42 @@ const makeView = name => ({ style, ...rest }) => (
   <View {...rest} style={[sheets[name], style]} />
 );
 
-export const Col = View;
 export const Row = makeView('Row');
 
-export const Col1 = makeView('Col1');
-export const Col2 = makeView('Col2');
-export const Col3 = makeView('Col3');
-export const Col4 = makeView('Col4');
-export const Col5 = makeView('Col5');
-export const Col6 = makeView('Col6');
-export const Col7 = makeView('Col7');
-export const Col8 = makeView('Col8');
-export const Col9 = makeView('Col9');
+Row.TL = makeView('Row.TL');
+Row.T = makeView('Row.T');
+Row.TR = makeView('Row.TR');
+Row.L = makeView('Row.L');
+Row.C = makeView('Row.C');
+Row.R = makeView('Row.R');
+Row.BL = makeView('Row.BL');
+Row.B = makeView('Row.B');
+Row.BR = makeView('Row.BR');
+//
+Row.LRT = makeView('Row.LRT');
+Row.LR = makeView('Row.LR');
+Row.LRB = makeView('Row.LRB');
+Row.RLT = makeView('Row.RLT');
+Row.RL = makeView('Row.RL');
+Row.RLB = makeView('Row.RLB');
 
-export const Row1 = makeView('Row1');
-export const Row2 = makeView('Row2');
-export const Row3 = makeView('Row3');
-export const Row4 = makeView('Row4');
-export const Row5 = makeView('Row5');
-export const Row6 = makeView('Row6');
-export const Row7 = makeView('Row7');
-export const Row8 = makeView('Row8');
-export const Row9 = makeView('Row9');
+const Col = makeView();
 
-export const Col17 = makeView('Col17');
-export const Col28 = makeView('Col28');
-export const Col39 = makeView('Col39');
-
-export const Row13 = makeView('Row13');
-export const Row46 = makeView('Row46');
-export const Row79 = makeView('Row79');
+Col.TL = makeView('Col.TL');
+Col.T = makeView('Col.T');
+Col.TR = makeView('Col.TR');
+Col.L = makeView('Col.L');
+Col.C = makeView('Col.C');
+Col.R = makeView('Col.R');
+Col.BL = makeView('Col.BL');
+Col.B = makeView('Col.B');
+Col.BR = makeView('Col.BR');
+//
+Col.TBL = makeView('Col.TBL');
+Col.TB = makeView('Col.TB');
+Col.TBR = makeView('Col.TBR');
+Col.BTL = makeView('Col.BTL');
+Col.BT = makeView('Col.BT');
+Col.BTR = makeView('Col.BTR');
 
 export default Col;

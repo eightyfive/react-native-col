@@ -1,44 +1,76 @@
 import dial from 'react-native-spacesheet/dial';
 
-const { assign } = Object;
-
 const styles = {
   Row: {
     flexDirection: 'row',
   },
   // space-between (Col)
-  Col17: {
+  'Col.TBL': {
     ...dial('column', 1),
     justifyContent: 'space-between',
   },
-  Col28: {
+  'Col.TB': {
     ...dial('column', 2),
     justifyContent: 'space-between',
   },
-  Col39: {
+  'Col.TBR': {
     ...dial('column', 3),
     justifyContent: 'space-between',
   },
+  'Col.BTL': {
+    ...dial('column', 1),
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+  },
+  'Col.BT': {
+    ...dial('column', 2),
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+  },
+  'Col.BTR': {
+    ...dial('column', 3),
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+  },
   // space-between (Row)
-  Row13: {
+  'Row.LRT': {
     ...dial('row', 1),
     justifyContent: 'space-between',
   },
-  Row46: {
+  'Row.LR': {
     ...dial('row', 4),
     justifyContent: 'space-between',
   },
-  Row79: {
+  'Row.LRB': {
     ...dial('row', 7),
+    justifyContent: 'space-between',
+  },
+  'Row.RLT': {
+    ...dial('row', 1),
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+  },
+  'Row.RL': {
+    ...dial('row', 4),
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+  },
+  'Row.RLB': {
+    ...dial('row', 7),
+    flexDirection: 'row-reverse',
     justifyContent: 'space-between',
   },
 };
 
-for (let i = 1; i < 10; i++) {
+const dials = { TL: 1, T: 2, TR: 3, L: 4, C: 5, R: 6, BL: 7, B: 8, BR: 9 };
+
+const { assign, keys } = Object;
+
+keys(sides).forEach(side =>
   assign(styles, {
-    [`Col${i}`]: dial('column', i),
-    [`Row${i}`]: dial('row', i),
-  });
-}
+    [`Col.${side}`]: dial('column', dials[side]),
+    [`Row.${side}`]: dial('row', dials[side]),
+  })
+);
 
 export default styles;

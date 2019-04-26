@@ -1,8 +1,6 @@
 # react-native-col
 
-A wrapper around [`react-native`](https://github.com/facebook/react-native) `<View />` enabling quick [Flexbox](https://facebook.github.io/react-native/docs/flexbox) positioning.
-
-The idea is to keep JSX as clean & concise as possible, while also providing some nice semantic.
+Quick & concise [`react-native`](https://github.com/facebook/react-native) [Flexbox](https://facebook.github.io/react-native/docs/flexbox) positioning.
 
 ## Installation
 
@@ -25,93 +23,152 @@ import { View } from 'react-native';
 />;
 
 // After
-import { Row3 } from 'react-native-col';
+import { Row } from 'react-native-col';
 
-<Row3 />;
+// "Top Right"
+<Row.TR />;
 ```
 
 ## Documentation
 
-### The `dial` notation
-
-The package exposes 2 types of components: `Col<dial>` and `Row<dial>`.
-
-The dial "property" is included **in the name of the component**: Col5, Row4, etc...
-
-Think of `dial` as a phone pad. Child components will align according to the dial number:
+### `Col`
 
 ```js
-<Row5 />
-```
+import Col from 'react-native-col';
 
-<img src="examples/row-5.jpg" width="180" />
+<Col />
+<View />
 
-```js
-<Col5 />
-```
+// Top Left
+<Col.TL />
+<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-start" }} />
 
-<img src="examples/col-5.jpg" width="180" />
+// Top
+<Col.T />
+<View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "center" }} />
 
-### `Col<dial>`
-
-```js
-import { Col3 } from 'react-native-col';
-
-<Col3 />
+// Top Right
+<Col.TR />
 <View style={{ flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-end" }} />
-```
 
-_NB_: All styles are pre-generated and _not_ passed inline.
+// Left
+<Col.L />
+<View style={{ flexDirection: "column", justifyContent: "center", alignItems: "flex-start" }} />
 
-### `Row<dial>`
+// Center
+<Col.C />
+<View style={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }} />
 
-```js
-import { Row6 } from 'react-native-col';
+// Right
+<Col.R />
+<View style={{ flexDirection: "column", justifyContent: "center", alignItems: "flex-end" }} />
 
-<Row6 />
-<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center" }} />
-```
+// Bottom Left
+<Col.BL />
+<View style={{ flexDirection: "column", justifyContent: "flex-end", alignItems: "flex-start" }} />
 
-### `Col`/`Row`
+// Bottom
+<Col.B />
+<View style={{ flexDirection: "column", justifyContent: "flex-end", alignItems: "center" }} />
 
-```js
-import { Col, Row } from 'react-native-col';
+// Bottom Right
+<Col.BR />
+<View style={{ flexDirection: "column", justifyContent: "flex-end", alignItems: "flex-end" }} />
 
-<Col /> = <View />
-
-<Row /> = <View style={{ flexDirection: "row" }} />
-```
-
-### `space-between`
-
-The package also exposes additional `Col<dial>`/`Row<dial>` views describing common use cases of `justifyContent: 'space-between'`:
-
-```js
-import { Col17, Col28, Col39 } from 'react-native-col';
-
-<Col17 />
+// Top to Bottom, aligned Left
+<Col.TBL />
 <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start" }} />
 
-<Col28 />
+// Top to Bottom
+<Col.TB />
 <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "center" }} />
 
-<Col39 />
+// Top to Bottom, aligned Right
+<Col.TBR />
 <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-end" }} />
+
+// Bottom to Top, aligned Left
+<Col.BTL />
+<View style={{ flexDirection: "column-reverse", justifyContent: "space-between", alignItems: "flex-start" }} />
+
+// Bottom to Top
+<Col.BT />
+<View style={{ flexDirection: "column-reverse", justifyContent: "space-between", alignItems: "center" }} />
+
+// Bottom to Top, aligned Right
+<Col.BTR />
+<View style={{ flexDirection: "column-reverse", justifyContent: "space-between", alignItems: "flex-end" }} />
 ```
 
-```js
-import { Row13, Row46, Row79 } from 'react-native-col';
+### `Row`
 
-<Row13 />
+```js
+import { Row } from 'react-native-col';
+
+<Row />
+<View style={{ flexDirection: "row" }} />
+
+// Top Left
+<Row.TL />
+<View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-start" }} />
+
+// Top
+<Row.T />
+<View style={{ flexDirection: "row", justifyContent: "center", alignItems: "flex-start" }} />
+
+// Top Right
+<Row.TR />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-start" }} />
+
+// Left
+<Row.L />
+<View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }} />
+
+// Center
+<Row.C />
+<View style={{ flexDirection: "row", justifyContent: "center", alignItems: "center" }} />
+
+// Right
+<Row.R />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "center" }} />
+
+// Bottom Left
+<Row.BL />
+<View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-end" }} />
+
+// Bottom
+<Row.B />
+<View style={{ flexDirection: "row", justifyContent: "center", alignItems: "flex-end" }} />
+
+// Bottom Right
+<Row.BR />
+<View style={{ flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-end" }} />
+
+// Left to Right, aligned Top
+<Row.LRT />
 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }} />
 
-<Row46 />
+// Left to Right
+<Row.LR />
 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} />
 
-<Row79 />
+// Left to Right, aligned Bottom
+<Row.LRB />
 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end" }} />
+
+// Right to Left, aligned Top
+<Row.RLT />
+<View style={{ flexDirection: "row-reverse", justifyContent: "space-between", alignItems: "flex-start" }} />
+
+// Right to Left
+<Row.RL />
+<View style={{ flexDirection: "row-reverse", justifyContent: "space-between", alignItems: "center" }} />
+
+// Right to Left, aligned Bottom
+<Row.RLB />
+<View style={{ flexDirection: "row-reverse", justifyContent: "space-between", alignItems: "flex-end" }} />
 ```
 
 ## Credits
 
-- [`react-native-row`](https://github.com/hyrwork/react-native-row) for the `dial` idea
+- [`react-native-row`](https://github.com/hyrwork/react-native-row) for the initial `dial` idea
