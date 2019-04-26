@@ -2,6 +2,16 @@
 
 Quick & concise [`react-native`](https://github.com/facebook/react-native) [Flexbox](https://facebook.github.io/react-native/docs/flexbox) positioning.
 
+```
+┌─────────────┐
+│ TL   T   TR │
+│             │
+│ L    C    R │
+│             │
+│ BL   B   BR │
+└─────────────┘
+```
+
 ## Installation
 
 ```
@@ -30,18 +40,6 @@ import { Row } from 'react-native-col';
 ```
 
 ## Documentation
-
-### Concept
-
-```
-┌─────────────┐
-│ TL   T   TR │
-│             │
-│ L    C    R │
-│             │
-│ BL   B   BR │
-└─────────────┘
-```
 
 ### `Col`
 
