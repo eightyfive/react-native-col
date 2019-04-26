@@ -31,6 +31,18 @@ import { Row } from 'react-native-col';
 
 ## Documentation
 
+### Concept
+
+```
+┌─────────────┐
+│ TL   T   TR │
+│             │
+│ L    C    R │
+│             │
+│ BL   B   BR │
+└─────────────┘
+```
+
 ### `Col`
 
 ```js
