@@ -66,7 +66,7 @@ const dials = { TL: 1, T: 2, TR: 3, L: 4, C: 5, R: 6, BL: 7, B: 8, BR: 9 };
 
 const { assign, keys } = Object;
 
-keys(sides).forEach(side =>
+keys(dials).forEach(side =>
   assign(styles, {
     [`Col.${side}`]: dial('column', dials[side]),
     [`Row.${side}`]: dial('row', dials[side]),
