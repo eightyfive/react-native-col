@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import sheets from './sheets';
 
 const makeView = (name, side) => ({ style, ...rest }) => (
-  <View {...rest} style={[sheets[name][side], style]} />
+  <View {...rest} style={[name && sheets[name][side], style]} />
 );
 
 export const Row = makeView('Row');
