@@ -7,7 +7,7 @@ const makeView = (name, side) => ({ style, ...rest }) => (
   <View {...rest} style={[name && sheets[name][side], style]} />
 );
 
-export const Row = makeView('Row');
+export const Row = makeView('Row', 'Row');
 
 Row.TL = makeView('Row', 'TL');
 Row.T = makeView('Row', 'T');
