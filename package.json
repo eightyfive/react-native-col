@@ -24,7 +24,9 @@
     "url": "https://github.com/eightyfive/react-native-col/issues"
   },
   "homepage": "https://github.com/eightyfive/react-native-col#readme",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react-native": "*"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
