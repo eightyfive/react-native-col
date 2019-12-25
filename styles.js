@@ -1,4 +1,4 @@
-import dial from 'react-native-spacesheet/dial';
+import dial from './dial';
 
 const dials = { TL: 1, T: 2, TR: 3, L: 4, C: 5, R: 6, BL: 7, B: 8, BR: 9 };
 
