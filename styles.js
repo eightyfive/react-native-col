@@ -1,8 +1,18 @@
 import dial from './dial';
 
-const dials = { TL: 1, T: 2, TR: 3, L: 4, C: 5, R: 6, BL: 7, B: 8, BR: 9 };
+const o = Object;
 
-const { assign, keys } = Object;
+const dials = {
+  TL: 1,
+  T: 2,
+  TR: 3,
+  L: 4,
+  C: 5,
+  R: 6,
+  BL: 7,
+  B: 8,
+  BR: 9,
+};
 
 export const Row = {
   Row: {
@@ -37,7 +47,9 @@ export const Row = {
   },
 };
 
-keys(dials).forEach(side => assign(Row, { [side]: dial('row', dials[side]) }));
+o.keys(dials).forEach((side) =>
+  o.assign(Row, { [side]: dial('row', dials[side]) })
+);
 
 export const Col = {
   TBL: {
@@ -69,8 +81,8 @@ export const Col = {
   },
 };
 
-keys(dials).forEach(side =>
-  assign(Col, { [side]: dial('column', dials[side]) })
+o.keys(dials).forEach((side) =>
+  o.assign(Col, { [side]: dial('column', dials[side]) })
 );
 
 export default { Col, Row };

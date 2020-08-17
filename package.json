@@ -4,7 +4,8 @@
   "description": "Easy React Native Flexbox",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "release": "np --no-2fa --no-draft-release"
   },
   "repository": {
     "type": "git",
