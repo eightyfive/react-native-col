@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 
 import sheets from './sheets';
 import * as styles from './styles';
@@ -7,12 +6,12 @@ import * as styles from './styles';
 const o = Object;
 
 function makeView(name, position, BaseView) {
-  return ({ style, ...rest }) => (
-    <BaseView {...rest} style={[name && sheets[name][position], style]} />
-  );
+  return ({ style, ...rest }) => {
+    return <BaseView style={[sheets[name][position], style]} {...rest} />;
+  };
 }
 
-export function makeCol(BaseView = View) {
+export function makeCol(BaseView) {
   const Col = makeView('Col', 'Col', BaseView);
   const positions = o.keys(styles.Col);
 
@@ -23,7 +22,7 @@ export function makeCol(BaseView = View) {
   return Col;
 }
 
-export function makeRow(BaseView = View) {
+export function makeRow(BaseView) {
   const Row = makeView('Row', 'Row', BaseView);
   const positions = o.keys(styles.Row);
 
