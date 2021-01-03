@@ -277,7 +277,7 @@ This way you define 6 sizes identifiable by their index: 0 is `0`, 1 is `10`, ..
 
 #### Shorthands
 
-Once your sizes are defined, you can apply quick & concise `margin` & `padding` styles:
+Once your sizes are defined, you can apply quick, concise & consistent `margin` and `padding` styles:
 
 ```js
 import { Row } from 'react-native-col';
