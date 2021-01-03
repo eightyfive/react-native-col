@@ -14,6 +14,9 @@ const dials = {
   BR: 9,
 };
 
+/**
+ * Col
+ */
 const Col = {};
 
 Col.Col = {
@@ -58,6 +61,9 @@ Col.BTR = {
   justifyContent: 'space-between',
 };
 
+/**
+ * Row
+ */
 const Row = {};
 
 Row.Row = {
