@@ -9,27 +9,22 @@ const $ = {};
   $[`x${flex}`] = { flex };
 });
 
-function View({ x, ...props }) {
-  if (View.sizes.length) {
-    const { style, ...rest } = props;
+function View({ style, x, ...rest }) {
+  let flex = false;
 
-    const [view, styles] = partition(rest, View.sizes);
-
-    let flex = false;
-
-    if (typeof x !== 'undefined') {
-      flex = x === true ? 1 : x;
-    }
-
-    return (
-      <RNView
-        {...view}
-        style={[...styles, flex !== false && $[`x${flex}`], style]}
-      />
-    );
+  if (typeof x !== 'undefined') {
+    flex = x === true ? 1 : x;
   }
 
-  return <RNView {...props} />;
+  const styles = [flex !== false && $[`x${flex}`], style];
+
+  if (View.sizes.length) {
+    const [view, spaces] = partition(rest, View.sizes);
+
+    return <RNView {...view} style={spaces.concat(styles)} />;
+  }
+
+  return <RNView {...rest} style={styles} />;
 }
 
 View.sizes = [];
