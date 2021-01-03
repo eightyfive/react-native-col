@@ -19,10 +19,6 @@ const dials = {
  */
 const Col = {};
 
-Col.Col = {
-  flexDirection: 'column',
-};
-
 // TL --> BR
 o.entries(dials).forEach(([side, num]) => {
   o.assign(Col, { [side]: dial('column', num) });
@@ -65,10 +61,6 @@ Col.BTR = {
  * Row
  */
 const Row = {};
-
-Row.Row = {
-  flexDirection: 'row',
-};
 
 // TL --> BR
 o.entries(dials).forEach(([side, num]) => {

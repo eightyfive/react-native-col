@@ -1,7 +1,24 @@
-import { View } from 'react-native';
+import React from 'react';
 
-import { makeCol, makeRow } from './make';
+import $ from './styles';
+import View from './view';
 
-export const Row = makeRow(View);
+const o = Object;
 
-export default makeCol(View);
+const makeView = (space) => ({ style, ...rest }) => {
+  return <View {...rest} style={[space, style]} />;
+};
+
+const Col = makeView({ flexDirection: 'column' });
+
+o.entries($.Col).forEach(([position, style]) => {
+  Col[position] = makeView(style);
+});
+
+export const Row = makeView({ flexDirection: 'row' });
+
+o.entries($.Row).forEach(([position, style]) => {
+  Row[position] = makeView(style);
+});
+
+export default Col;
