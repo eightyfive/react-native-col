@@ -124,7 +124,12 @@ import Col from 'react-native-col';
 
 // Top Right
 <Col.TR />
+```
 
+<img src="images/col-top-left.png" width="300" /> <img src="images/col-top.png" width="300" /> <img src="images/col-top-right.png" width="300" />
+
+
+```js
 // Left
 <Col.L />
 
@@ -133,7 +138,12 @@ import Col from 'react-native-col';
 
 // Right
 <Col.R />
+```
 
+<img src="images/col-left.png" width="300" /> <img src="images/col-center.png" width="300" /> <img src="images/col-right.png" width="300" />
+
+
+```js
 // Bottom Left
 <Col.BL />
 
@@ -144,8 +154,6 @@ import Col from 'react-native-col';
 <Col.BR />
 ```
 
-<img src="images/col-top-left.png" width="300" /> <img src="images/col-top.png" width="300" /> <img src="images/col-top-right.png" width="300" />
-<img src="images/col-left.png" width="300" /> <img src="images/col-center.png" width="300" /> <img src="images/col-right.png" width="300" />
 <img src="images/col-bottom-left.png" width="300" /> <img src="images/col-bottom.png" width="300" /> <img src="images/col-bottom-right.png" width="300" />
 
 ```js
@@ -157,6 +165,12 @@ import Col from 'react-native-col';
 
 // Top to Bottom, aligned Right
 <Col.TBR />
+```
+
+<img src="images/col-top-bottom-left.png" width="300" /> <img src="images/col-top-bottom.png" width="300" /> <img src="images/col-top-bottom-right.png" width="300" />
+
+
+```js
 
 // Bottom to Top, aligned Left
 <Col.BTL />
@@ -168,7 +182,6 @@ import Col from 'react-native-col';
 <Col.BTR />
 ```
 
-<img src="images/col-top-bottom-left.png" width="300" /> <img src="images/col-top-bottom.png" width="300" /> <img src="images/col-top-bottom-right.png" width="300" />
 <img src="images/col-bottom-top-left.png" width="300" /> <img src="images/col-bottom-top.png" width="300" /> <img src="images/col-bottom-top-right.png" width="300" />
 
 ### `Row`
@@ -192,7 +205,12 @@ import { Row } from 'react-native-col';
 
 // Top Right
 <Row.TR />
+```
 
+<img src="images/row-top-left.png" width="300" /> <img src="images/row-top.png" width="300" /> <img src="images/row-top-right.png" width="300" />
+
+
+```js
 // Left
 <Row.L />
 
@@ -201,7 +219,12 @@ import { Row } from 'react-native-col';
 
 // Right
 <Row.R />
+```
 
+<img src="images/row-left.png" width="300" /> <img src="images/row-center.png" width="300" /> <img src="images/row-right.png" width="300" />
+
+
+```js
 // Bottom Left
 <Row.BL />
 
@@ -212,8 +235,6 @@ import { Row } from 'react-native-col';
 <Row.BR />
 ```
 
-<img src="images/row-top-left.png" width="300" /> <img src="images/row-top.png" width="300" /> <img src="images/row-top-right.png" width="300" />
-<img src="images/row-left.png" width="300" /> <img src="images/row-center.png" width="300" /> <img src="images/row-right.png" width="300" />
 <img src="images/row-bottom-left.png" width="300" /> <img src="images/row-bottom.png" width="300" /> <img src="images/row-bottom-right.png" width="300" />
 
 ```js
@@ -225,7 +246,11 @@ import { Row } from 'react-native-col';
 
 // Left to Right, aligned Bottom
 <Row.LRB />
+```
 
+<img src="images/row-left-right-top.png" width="300" /> <img src="images/row-left-right.png" width="300" /> <img src="images/row-left-right-bottom.png" width="300" />
+
+```js
 // Right to Left, aligned Top
 <Row.RLT />
 
@@ -236,7 +261,6 @@ import { Row } from 'react-native-col';
 <Row.RLB />
 ```
 
-<img src="images/row-left-right-top.png" width="300" /> <img src="images/row-left-right.png" width="300" /> <img src="images/row-left-right-bottom.png" width="300" />
 <img src="images/row-right-left-top.png" width="300" /> <img src="images/row-right-left.png" width="300" /> <img src="images/row-right-left-bottom.png" width="300" />
 
 ### Spacing
