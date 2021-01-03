@@ -63,14 +63,15 @@ import Col, { Row } from 'react-native-col';
 <Row />
 ```
 
-### `Col`
+### Demo
+
+All demos will use these 3 RGB squares:
 
 ```js
 import Col from 'react-native-col';
 
-// RGB squares
 const $ = {
-  square: {
+  sq: {
     width: 50,
     height: 50,
   },
@@ -90,21 +91,24 @@ const Red = () => <Col style={[$.sq, $.r]} />;
 const Green = () => <Col style={[$.sq, $.g]} />;
 
 const Blue = () => <Col style={[$.sq, $.b]} />;
+```
 
-function Demo() {
-  return (
-    <Col x>
-      <Red />
-      <Green />
-      <Blue />
-    </Col>
-  );
-}
+### `Col`
+
+```js
+import Col from 'react-native-col';
+
+<Col x>
+  <Red />
+  <Green />
+  <Blue />
+</Col>;
 ```
 
 #### Top Left
 
 ```js
+// Equivalent to <Col />
 <Col.TL x>
   <Red />
   <Green />
@@ -407,20 +411,17 @@ function Demo() {
 ```js
 import { Row } from 'react-native-col';
 
-function Demo() {
-  return (
-    <Row x>
-      <Red />
-      <Green />
-      <Blue />
-    </Row>
-  );
-}
+<Row x>
+  <Red />
+  <Green />
+  <Blue />
+</Row>;
 ```
 
 #### Top Left
 
 ```js
+// Equivalent to <Row />
 <Row.TL x>
   <Red />
   <Green />
