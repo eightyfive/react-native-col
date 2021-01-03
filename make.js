@@ -1,7 +1,7 @@
 import React from 'react';
 
 import sheets from './sheets';
-import * as styles from './styles';
+import $ from './styles';
 
 const o = Object;
 
@@ -13,7 +13,7 @@ function makeView(name, position, BaseView) {
 
 export function makeCol(BaseView) {
   const Col = makeView('Col', 'Col', BaseView);
-  const positions = o.keys(styles.Col);
+  const positions = o.keys($.Col);
 
   for (const pos of positions) {
     Col[pos] = makeView('Col', pos, BaseView);
@@ -24,7 +24,7 @@ export function makeCol(BaseView) {
 
 export function makeRow(BaseView) {
   const Row = makeView('Row', 'Row', BaseView);
-  const positions = o.keys(styles.Row);
+  const positions = o.keys($.Row);
 
   for (const pos of positions) {
     Row[pos] = makeView('Row', pos, BaseView);

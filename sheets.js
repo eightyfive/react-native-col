@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
 //
-import styles from './styles';
+import $ from './styles';
 
-export const Col = StyleSheet.create(styles.Col);
+export const Col = StyleSheet.create($.Col);
 
-export const Row = StyleSheet.create(styles.Row);
+export const Row = StyleSheet.create($.Row);
 
 export default { Col, Row };
