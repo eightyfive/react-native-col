@@ -22,7 +22,10 @@ function View({ x, ...props }) {
     }
 
     return (
-      <RNView {...view} style={[...styles, flex && $[`x${flex}`], style]} />
+      <RNView
+        {...view}
+        style={[...styles, flex !== false && $[`x${flex}`], style]}
+      />
     );
   }
 
