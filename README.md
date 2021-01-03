@@ -57,6 +57,10 @@ import Col, { Row } from 'react-native-col';
 // Equivalent:
 <Row x />
 <Row x={1} />
+
+// Optional
+<Col />
+<Row />
 ```
 
 ### `Col`
@@ -64,17 +68,48 @@ import Col, { Row } from 'react-native-col';
 ```js
 import Col from 'react-native-col';
 
-<Col x>
-  <Red />
-  <Green />
-  <Blue />
-</Col>;
+// RGB squares
+const $ = {
+  square: {
+    width: 50,
+    height: 50,
+  },
+  r: {
+    backgroundColor: 'red',
+  },
+  g: {
+    backgroundColor: 'green',
+  },
+  b: {
+    backgroundColor: 'blue',
+  },
+};
+
+const Red = () => <Col style={[$.sq, $.r]} />;
+
+const Green = () => <Col style={[$.sq, $.g]} />;
+
+const Blue = () => <Col style={[$.sq, $.b]} />;
+
+function Demo() {
+  return (
+    <Col x>
+      <Red />
+      <Green />
+      <Blue />
+    </Col>
+  );
+}
 ```
 
 #### Top Left
 
 ```js
-<Col.TL />
+<Col.TL x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.TL>
 ```
 
 <img src="images/col-top-left.png" width="320" />
@@ -90,7 +125,11 @@ import Col from 'react-native-col';
 #### Top
 
 ```js
-<Col.T />
+<Col.T x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.T>
 ```
 
 <img src="images/col-top.png" width="320" />
@@ -106,7 +145,11 @@ import Col from 'react-native-col';
 #### Top Right
 
 ```js
-<Col.TR />
+<Col.TR x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.TR>
 ```
 
 <img src="images/col-top-right.png" width="320" />
@@ -122,7 +165,11 @@ import Col from 'react-native-col';
 #### Left
 
 ```js
-<Col.L />
+<Col.L x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.L>
 ```
 
 <img src="images/col-left.png" width="320" />
@@ -138,7 +185,11 @@ import Col from 'react-native-col';
 #### Center
 
 ```js
-<Col.C />
+<Col.C x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.C>
 ```
 
 <img src="images/col-center.png" width="320" />
@@ -154,7 +205,11 @@ import Col from 'react-native-col';
 #### Right
 
 ```js
-<Col.R />
+<Col.R x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.R>
 ```
 
 <img src="images/col-right.png" width="320" />
@@ -170,7 +225,11 @@ import Col from 'react-native-col';
 #### Bottom Left
 
 ```js
-<Col.BL />
+<Col.BL x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.BL>
 ```
 
 <img src="images/col-bottom-left.png" width="320" />
@@ -186,7 +245,11 @@ import Col from 'react-native-col';
 #### Bottom
 
 ```js
-<Col.B />
+<Col.B x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.B>
 ```
 
 <img src="images/col-bottom.png" width="320" />
@@ -202,7 +265,11 @@ import Col from 'react-native-col';
 #### Bottom Right
 
 ```js
-<Col.BR />
+<Col.BR x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.BR>
 ```
 
 <img src="images/col-bottom-right.png" width="320" />
@@ -218,7 +285,11 @@ import Col from 'react-native-col';
 #### Top to Bottom, aligned Left
 
 ```js
-<Col.TBL />
+<Col.TBL x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.TBL>
 ```
 
 <img src="images/col-top-bottom-left.png" width="320" />
@@ -234,7 +305,11 @@ import Col from 'react-native-col';
 #### Top to Bottom
 
 ```js
-<Col.TB />
+<Col.TB x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.TB>
 ```
 
 <img src="images/col-top-bottom.png" width="320" />
@@ -250,7 +325,11 @@ import Col from 'react-native-col';
 #### Top to Bottom, aligned Right
 
 ```js
-<Col.TBR />
+<Col.TBR x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.TBR>
 ```
 
 <img src="images/col-top-bottom-right.png" width="320" />
@@ -266,7 +345,11 @@ import Col from 'react-native-col';
 #### Bottom to Top, aligned Left
 
 ```js
-<Col.BTL />
+<Col.BTL x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.BTL>
 ```
 
 <img src="images/col-bottom-top-left.png" width="320" />
@@ -282,7 +365,11 @@ import Col from 'react-native-col';
 #### Bottom to Top
 
 ```js
-<Col.BT />
+<Col.BT x>
+  <Red />
+  <Green />
+  <Blue />
+<Col.BT>
 ```
 
 <img src="images/col-bottom-top.png" width="320" />
@@ -298,7 +385,11 @@ import Col from 'react-native-col';
 #### Bottom to Top, aligned Right
 
 ```js
-<Col.BTR />
+<Col.BTR x>
+  <Red />
+  <Green />
+  <Blue />
+</Col.BTR>
 ```
 
 <img src="images/col-bottom-top-right.png" width="320" />
@@ -316,17 +407,25 @@ import Col from 'react-native-col';
 ```js
 import { Row } from 'react-native-col';
 
-<Row x>
-  <Red />
-  <Green />
-  <Blue />
-</Row>;
+function Demo() {
+  return (
+    <Row x>
+      <Red />
+      <Green />
+      <Blue />
+    </Row>
+  );
+}
 ```
 
 #### Top Left
 
 ```js
-<Row.TL />
+<Row.TL x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.TL>
 ```
 
 <img src="images/row-top-left.png" width="320" />
@@ -342,7 +441,11 @@ import { Row } from 'react-native-col';
 #### Top
 
 ```js
-<Row.T />
+<Row.T x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.T>
 ```
 
 <img src="images/row-top.png" width="320" />
@@ -358,7 +461,11 @@ import { Row } from 'react-native-col';
 #### Top Right
 
 ```js
-<Row.TR />
+<Row.TR x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.TR>
 ```
 
 <img src="images/row-top-right.png" width="320" />
@@ -374,7 +481,11 @@ import { Row } from 'react-native-col';
 #### Left
 
 ```js
-<Row.L />
+<Row.L x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.L>
 ```
 
 <img src="images/row-left.png" width="320" />
@@ -390,7 +501,11 @@ import { Row } from 'react-native-col';
 #### Center
 
 ```js
-<Row.C />
+<Row.C x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.C>
 ```
 
 <img src="images/row-center.png" width="320" />
@@ -406,7 +521,11 @@ import { Row } from 'react-native-col';
 #### Right
 
 ```js
-<Row.R />
+<Row.R x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.R>
 ```
 
 <img src="images/row-right.png" width="320" />
@@ -422,7 +541,11 @@ import { Row } from 'react-native-col';
 #### Bottom Left
 
 ```js
-<Row.BL />
+<Row.BL x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.BL>
 ```
 
 <img src="images/row-bottom-left.png" width="320" />
@@ -438,7 +561,11 @@ import { Row } from 'react-native-col';
 #### Bottom
 
 ```js
-<Row.B />
+<Row.B x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.B>
 ```
 
 <img src="images/row-bottom.png" width="320" />
@@ -454,7 +581,11 @@ import { Row } from 'react-native-col';
 #### Bottom Right
 
 ```js
-<Row.BR />
+<Row.BR x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.BR>
 ```
 
 <img src="images/row-bottom-right.png" width="320" />
@@ -470,7 +601,11 @@ import { Row } from 'react-native-col';
 #### Left to Right, aligned Top
 
 ```js
-<Row.LRT />
+<Row.LRT x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.LRT>
 ```
 
 <img src="images/row-left-right-top.png" width="320" />
@@ -486,7 +621,11 @@ import { Row } from 'react-native-col';
 #### Left to Right
 
 ```js
-<Row.LR />
+<Row.LR x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.LR>
 ```
 
 <img src="images/row-left-right.png" width="320" />
@@ -502,7 +641,11 @@ import { Row } from 'react-native-col';
 #### Left to Right, aligned Bottom
 
 ```js
-<Row.LRB />
+<Row.LRB x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.LRB>
 ```
 
 <img src="images/row-left-right-bottom.png" width="320" />
@@ -518,7 +661,11 @@ import { Row } from 'react-native-col';
 #### Right to Left, aligned Top
 
 ```js
-<Row.RLT />
+<Row.RLT x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.RLT>
 ```
 
 <img src="images/row-right-left-top.png" width="320" />
@@ -534,7 +681,11 @@ import { Row } from 'react-native-col';
 #### Right to Left
 
 ```js
-<Row.RL />
+<Row.RL x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.RL>
 ```
 
 <img src="images/row-right-left.png" width="320" />
@@ -550,7 +701,11 @@ import { Row } from 'react-native-col';
 #### Right to Left, aligned Bottom
 
 ```js
-<Row.RLB />
+<Row.RLB x>
+  <Red />
+  <Green />
+  <Blue />
+</Row.RLB>
 ```
 
 <img src="images/row-right-left-bottom.png" width="320" />
