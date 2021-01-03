@@ -1,13 +1,12 @@
 import React from 'react';
 
-import sheets from './sheets';
 import $ from './styles';
 
 const o = Object;
 
 function makeView(name, position, BaseView) {
   return ({ style, ...rest }) => {
-    return <BaseView style={[sheets[name][position], style]} {...rest} />;
+    return <BaseView style={[$[name][position], style]} {...rest} />;
   };
 }
 
