@@ -1,3 +1,4 @@
+import React from 'react';
 import { View as RNView } from 'react-native';
 
 import partition from './space';
