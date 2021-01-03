@@ -57,12 +57,13 @@ import { Row } from 'react-native-col';
 
 ### The `x` property
 
-The `x` property is an alias for the `flex` style property. It is `1` by default, but you can also specify a number between `0..9`:
+The `x` property is an alias for the `flex` value. It is `1` by default, but you can also specify a [number between `-1..9`](https://reactnative.dev/docs/layout-props#flex):
 
 ```js
 import Col, { Row } from 'react-native-col';
 
 <Col x={2} />
+<Row x={-1} />
 
 // Equivalent:
 <Row x />
@@ -128,7 +129,6 @@ import Col from 'react-native-col';
 
 <img src="images/col-top-left.png" width="300" /> <img src="images/col-top.png" width="300" /> <img src="images/col-top-right.png" width="300" />
 
-
 ```js
 // Left
 <Col.L />
@@ -141,7 +141,6 @@ import Col from 'react-native-col';
 ```
 
 <img src="images/col-left.png" width="300" /> <img src="images/col-center.png" width="300" /> <img src="images/col-right.png" width="300" />
-
 
 ```js
 // Bottom Left
@@ -168,7 +167,6 @@ import Col from 'react-native-col';
 ```
 
 <img src="images/col-top-bottom-left.png" width="300" /> <img src="images/col-top-bottom.png" width="300" /> <img src="images/col-top-bottom-right.png" width="300" />
-
 
 ```js
 
@@ -209,7 +207,6 @@ import { Row } from 'react-native-col';
 
 <img src="images/row-top-left.png" width="300" /> <img src="images/row-top.png" width="300" /> <img src="images/row-top-right.png" width="300" />
 
-
 ```js
 // Left
 <Row.L />
@@ -222,7 +219,6 @@ import { Row } from 'react-native-col';
 ```
 
 <img src="images/row-left.png" width="300" /> <img src="images/row-center.png" width="300" /> <img src="images/row-right.png" width="300" />
-
 
 ```js
 // Bottom Left

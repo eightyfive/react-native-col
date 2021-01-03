@@ -5,7 +5,7 @@ import partition from './space';
 
 const $ = {};
 
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach((flex) => {
+[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach((flex) => {
   $[`x${flex}`] = { flex };
 });
 
