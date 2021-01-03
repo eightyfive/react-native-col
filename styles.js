@@ -47,9 +47,9 @@ export const Row = {
   },
 };
 
-o.keys(dials).forEach((side) =>
-  o.assign(Row, { [side]: dial('row', dials[side]) })
-);
+o.entries(dials).forEach(([side, dial]) => {
+  o.assign(Row, { [side]: dial('row', dial) });
+});
 
 export const Col = {
   TBL: {
@@ -81,8 +81,8 @@ export const Col = {
   },
 };
 
-o.keys(dials).forEach((side) =>
-  o.assign(Col, { [side]: dial('column', dials[side]) })
-);
+o.entries(dials).forEach(([side, dial]) => {
+  o.assign(Col, { [side]: dial('column', dial) });
+});
 
 export default { Col, Row };
