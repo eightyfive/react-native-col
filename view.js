@@ -14,5 +14,4 @@ export default function View(props) {
   return <RNView {...props} />;
 }
 
-// View.sizes = [0, 4, 8, 16, 32, 64];
 View.sizes = [];
