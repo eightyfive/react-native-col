@@ -1,6 +1,6 @@
 const o = Object;
 
-const aliases = {
+const byAliases = {
   m: 'margin',
   mt: 'marginTop',
   mr: 'marginRight',
@@ -30,14 +30,14 @@ function partitionObject(obj, filterFn) {
   );
 }
 
-function getStyles(spaces, sizes) {
-  return o.entries(spaces).map(([alias, index]) => {
+function getStyles(aliases, sizes) {
+  return o.entries(aliases).map(([alias, index]) => {
     const cacheKey = `${alias}${index}`;
 
     let cached = cache.get(cacheKey);
 
     if (!cached) {
-      cached = { [aliases[alias]]: sizes[index] };
+      cached = { [byAliases[alias]]: sizes[index] };
 
       cache.set(cacheKey, cached);
     }
@@ -47,7 +47,7 @@ function getStyles(spaces, sizes) {
 }
 
 export default function partition(props, sizes) {
-  const [view, spaces] = partitionObject(props, (key) => !aliases[key]);
+  const [view, aliases] = partitionObject(props, (key) => !byAliases[key]);
 
-  return [view, getStyles(spaces, sizes)];
+  return [view, getStyles(aliases, sizes)];
 }

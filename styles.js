@@ -20,8 +20,8 @@ const dials = {
 const Col = {};
 
 // TL --> BR
-o.entries(dials).forEach(([side, num]) => {
-  o.assign(Col, { [side]: dial('column', num) });
+o.entries(dials).forEach(([key, val]) => {
+  Col[key] = dial('column', val);
 });
 
 Col.TBL = {
@@ -63,8 +63,8 @@ Col.BTR = {
 const Row = {};
 
 // TL --> BR
-o.entries(dials).forEach(([side, num]) => {
-  o.assign(Row, { [side]: dial('row', num) });
+o.entries(dials).forEach(([key, val]) => {
+  Row[key] = dial('row', val);
 });
 
 Row.LRT = {
