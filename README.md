@@ -77,7 +77,7 @@ import Col from 'react-native-col';
 <Col.TL />
 ```
 
-<img src="images/col-top-left.png" />
+<img src="images/col-top-left.png" width="320" />
 
 ```json
 {
@@ -93,7 +93,7 @@ import Col from 'react-native-col';
 <Col.T />
 ```
 
-<img src="images/col-top.png" />
+<img src="images/col-top.png" width="320" />
 
 ```json
 {
@@ -109,7 +109,7 @@ import Col from 'react-native-col';
 <Col.TR />
 ```
 
-<img src="images/col-top-right.png" />
+<img src="images/col-top-right.png" width="320" />
 
 ```json
 {
@@ -125,7 +125,7 @@ import Col from 'react-native-col';
 <Col.L />
 ```
 
-<img src="images/col-left.png" />
+<img src="images/col-left.png" width="320" />
 
 ```json
 {
@@ -141,7 +141,7 @@ import Col from 'react-native-col';
 <Col.C />
 ```
 
-<img src="images/col-center.png" />
+<img src="images/col-center.png" width="320" />
 
 ```json
 {
@@ -157,7 +157,7 @@ import Col from 'react-native-col';
 <Col.R />
 ```
 
-<img src="images/col-right.png" />
+<img src="images/col-right.png" width="320" />
 
 ```json
 {
@@ -173,7 +173,7 @@ import Col from 'react-native-col';
 <Col.BL />
 ```
 
-<img src="images/col-bottom-left.png" />
+<img src="images/col-bottom-left.png" width="320" />
 
 ```json
 {
@@ -189,7 +189,7 @@ import Col from 'react-native-col';
 <Col.B />
 ```
 
-<img src="images/col-bottom.png" />
+<img src="images/col-bottom.png" width="320" />
 
 ```json
 {
@@ -205,7 +205,7 @@ import Col from 'react-native-col';
 <Col.BR />
 ```
 
-<img src="images/col-bottom-right.png" />
+<img src="images/col-bottom-right.png" width="320" />
 
 ```json
 {
@@ -221,7 +221,7 @@ import Col from 'react-native-col';
 <Col.TBL />
 ```
 
-<img src="images/col-top-bottom-left.png" />
+<img src="images/col-top-bottom-left.png" width="320" />
 
 ```json
 {
@@ -237,7 +237,7 @@ import Col from 'react-native-col';
 <Col.TB />
 ```
 
-<img src="images/col-top-bottom.png" />
+<img src="images/col-top-bottom.png" width="320" />
 
 ```json
 {
@@ -253,7 +253,7 @@ import Col from 'react-native-col';
 <Col.TBR />
 ```
 
-<img src="images/col-top-bottom-right.png" />
+<img src="images/col-top-bottom-right.png" width="320" />
 
 ```json
 {
@@ -269,7 +269,7 @@ import Col from 'react-native-col';
 <Col.BTL />
 ```
 
-<img src="images/col-bottom-top-left.png" />
+<img src="images/col-bottom-top-left.png" width="320" />
 
 ```json
 {
@@ -285,7 +285,7 @@ import Col from 'react-native-col';
 <Col.BT />
 ```
 
-<img src="images/col-bottom-top.png" />
+<img src="images/col-bottom-top.png" width="320" />
 
 ```json
 {
@@ -301,7 +301,7 @@ import Col from 'react-native-col';
 <Col.BTR />
 ```
 
-<img src="images/col-bottom-top-right.png" />
+<img src="images/col-bottom-top-right.png" width="320" />
 
 ```json
 {
@@ -329,7 +329,7 @@ import { Row } from 'react-native-col';
 <Row.TL />
 ```
 
-<img src="images/row-top-left.png" />
+<img src="images/row-top-left.png" width="320" />
 
 ```json
 {
@@ -345,7 +345,7 @@ import { Row } from 'react-native-col';
 <Row.T />
 ```
 
-<img src="images/row-top.png" />
+<img src="images/row-top.png" width="320" />
 
 ```json
 {
@@ -361,7 +361,7 @@ import { Row } from 'react-native-col';
 <Row.TR />
 ```
 
-<img src="images/row-top-right.png" />
+<img src="images/row-top-right.png" width="320" />
 
 ```json
 {
@@ -377,7 +377,7 @@ import { Row } from 'react-native-col';
 <Row.L />
 ```
 
-<img src="images/row-left.png" />
+<img src="images/row-left.png" width="320" />
 
 ```json
 {
@@ -393,7 +393,7 @@ import { Row } from 'react-native-col';
 <Row.C />
 ```
 
-<img src="images/row-center.png" />
+<img src="images/row-center.png" width="320" />
 
 ```json
 {
@@ -409,7 +409,7 @@ import { Row } from 'react-native-col';
 <Row.R />
 ```
 
-<img src="images/row-right.png" />
+<img src="images/row-right.png" width="320" />
 
 ```json
 {
@@ -425,7 +425,7 @@ import { Row } from 'react-native-col';
 <Row.BL />
 ```
 
-<img src="images/row-bottom-left.png" />
+<img src="images/row-bottom-left.png" width="320" />
 
 ```json
 {
@@ -441,7 +441,7 @@ import { Row } from 'react-native-col';
 <Row.B />
 ```
 
-<img src="images/row-bottom.png" />
+<img src="images/row-bottom.png" width="320" />
 
 ```json
 {
@@ -457,7 +457,7 @@ import { Row } from 'react-native-col';
 <Row.BR />
 ```
 
-<img src="images/row-bottom-right.png" />
+<img src="images/row-bottom-right.png" width="320" />
 
 ```json
 {
@@ -473,7 +473,7 @@ import { Row } from 'react-native-col';
 <Row.LRT />
 ```
 
-<img src="images/row-left-right-top.png" />
+<img src="images/row-left-right-top.png" width="320" />
 
 ```json
 {
@@ -489,7 +489,7 @@ import { Row } from 'react-native-col';
 <Row.LR />
 ```
 
-<img src="images/row-left-right.png" />
+<img src="images/row-left-right.png" width="320" />
 
 ```json
 {
@@ -505,7 +505,7 @@ import { Row } from 'react-native-col';
 <Row.LRB />
 ```
 
-<img src="images/row-left-right-bottom.png" />
+<img src="images/row-left-right-bottom.png" width="320" />
 
 ```json
 {
@@ -521,7 +521,7 @@ import { Row } from 'react-native-col';
 <Row.RLT />
 ```
 
-<img src="images/row-right-left-top.png" />
+<img src="images/row-right-left-top.png" width="320" />
 
 ```json
 {
@@ -537,7 +537,7 @@ import { Row } from 'react-native-col';
 <Row.RL />
 ```
 
-<img src="images/row-right-left.png" />
+<img src="images/row-right-left.png" width="320" />
 
 ```json
 {
@@ -553,7 +553,7 @@ import { Row } from 'react-native-col';
 <Row.RLB />
 ```
 
-<img src="images/row-right-left-bottom.png" />
+<img src="images/row-right-left-bottom.png" width="320" />
 
 ```json
 {
