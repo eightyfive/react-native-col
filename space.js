@@ -50,8 +50,6 @@ function getStyles(aliases, sizes) {
     if (!cached) {
       const unalias = byAliases[alias];
 
-      console.log(indexes, unalias, indexes.length === 1, sizes[indexes[0]]);
-
       if (indexes.length === 1) {
         cached = {
           [unalias]: sizes[indexes[0]],
