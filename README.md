@@ -18,40 +18,8 @@ Quick & concise [`react-native`](https://github.com/facebook/react-native) Flexb
   - [The `x` property](#the-x-property)
   - [Demo](#demo)
   - [`Col`](#col)
-    - [Top Left](#top-left)
-    - [Top](#top)
-    - [Top Right](#top-right)
-    - [Left](#left)
-    - [Center](#center)
-    - [Right](#right)
-    - [Bottom Left](#bottom-left)
-    - [Bottom](#bottom)
-    - [Bottom Right](#bottom-right)
-    - [Top to Bottom, aligned Left](#top-to-bottom-aligned-left)
-    - [Top to Bottom](#top-to-bottom)
-    - [Top to Bottom, aligned Right](#top-to-bottom-aligned-right)
-    - [Bottom to Top, aligned Left](#bottom-to-top-aligned-left)
-    - [Bottom to Top](#bottom-to-top)
-    - [Bottom to Top, aligned Right](#bottom-to-top-aligned-right)
   - [`Row`](#row)
-    - [Top Left](#top-left-1)
-    - [Top](#top-1)
-    - [Top Right](#top-right-1)
-    - [Left](#left-1)
-    - [Center](#center-1)
-    - [Right](#right-1)
-    - [Bottom Left](#bottom-left-1)
-    - [Bottom](#bottom-1)
-    - [Bottom Right](#bottom-right-1)
-    - [Left to Right, aligned Top](#left-to-right-aligned-top)
-    - [Left to Right](#left-to-right)
-    - [Left to Right, aligned Bottom](#left-to-right-aligned-bottom)
-    - [Right to Left, aligned Top](#right-to-left-aligned-top)
-    - [Right to Left](#right-to-left)
-    - [Right to Left, aligned Bottom](#right-to-left-aligned-bottom)
   - [Spacing](#spacing)
-    - [Sizes definition](#sizes-definition)
-    - [Shorthands](#shorthands)
 - [Credits](#credits)
 
 ## Installation
@@ -147,306 +115,61 @@ import Col from 'react-native-col';
 </Col>;
 ```
 
-#### Top Left
+```js
+// Top Left
+<Col.TL /> // Equivalent to <Col />
+
+// Top
+<Col.T />
+
+// Top Right
+<Col.TR />
+
+// Left
+<Col.L />
+
+// Center
+<Col.C />
+
+// Right
+<Col.R />
+
+// Bottom Left
+<Col.BL />
+
+// Bottom
+<Col.B />
+
+// Bottom Right
+<Col.BR />
+```
+
+<img src="images/col-top-left.png" width="300" /> <img src="images/col-top.png" width="300" /> <img src="images/col-top-right.png" width="300" />
+<img src="images/col-left.png" width="300" /> <img src="images/col-center.png" width="300" /> <img src="images/col-right.png" width="300" />
+<img src="images/col-bottom-left.png" width="300" /> <img src="images/col-bottom.png" width="300" /> <img src="images/col-bottom-right.png" width="300" />
 
 ```js
-// Equivalent to <Col />
-<Col.TL x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.TL>
+// Top to Bottom, aligned Left
+<Col.TBL />
+
+// Top to Bottom
+<Col.TB />
+
+// Top to Bottom, aligned Right
+<Col.TBR />
+
+// Bottom to Top, aligned Left
+<Col.BTL />
+
+// Bottom to Top
+<Col.BT />
+
+// Bottom to Top, aligned Right
+<Col.BTR />
 ```
 
-<img src="images/col-top-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "flex-start",
-  "alignItems": "flex-start"
-}
-```
-
-#### Top
-
-```js
-<Col.T x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.T>
-```
-
-<img src="images/col-top.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "flex-start",
-  "alignItems": "center"
-}
-```
-
-#### Top Right
-
-```js
-<Col.TR x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.TR>
-```
-
-<img src="images/col-top-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "flex-start",
-  "alignItems": "flex-end"
-}
-```
-
-#### Left
-
-```js
-<Col.L x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.L>
-```
-
-<img src="images/col-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "center",
-  "alignItems": "flex-start"
-}
-```
-
-#### Center
-
-```js
-<Col.C x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.C>
-```
-
-<img src="images/col-center.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "center",
-  "alignItems": "center"
-}
-```
-
-#### Right
-
-```js
-<Col.R x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.R>
-```
-
-<img src="images/col-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "center",
-  "alignItems": "flex-end"
-}
-```
-
-#### Bottom Left
-
-```js
-<Col.BL x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.BL>
-```
-
-<img src="images/col-bottom-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "flex-end",
-  "alignItems": "flex-start"
-}
-```
-
-#### Bottom
-
-```js
-<Col.B x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.B>
-```
-
-<img src="images/col-bottom.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "flex-end",
-  "alignItems": "center"
-}
-```
-
-#### Bottom Right
-
-```js
-<Col.BR x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.BR>
-```
-
-<img src="images/col-bottom-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "flex-end",
-  "alignItems": "flex-end"
-}
-```
-
-#### Top to Bottom, aligned Left
-
-```js
-<Col.TBL x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.TBL>
-```
-
-<img src="images/col-top-bottom-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "space-between",
-  "alignItems": "flex-start"
-}
-```
-
-#### Top to Bottom
-
-```js
-<Col.TB x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.TB>
-```
-
-<img src="images/col-top-bottom.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "space-between",
-  "alignItems": "center"
-}
-```
-
-#### Top to Bottom, aligned Right
-
-```js
-<Col.TBR x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.TBR>
-```
-
-<img src="images/col-top-bottom-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "column",
-  "justifyContent": "space-between",
-  "alignItems": "flex-end"
-}
-```
-
-#### Bottom to Top, aligned Left
-
-```js
-<Col.BTL x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.BTL>
-```
-
-<img src="images/col-bottom-top-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "column-reverse",
-  "justifyContent": "space-between",
-  "alignItems": "flex-start"
-}
-```
-
-#### Bottom to Top
-
-```js
-<Col.BT x>
-  <Red />
-  <Green />
-  <Blue />
-<Col.BT>
-```
-
-<img src="images/col-bottom-top.png" width="320" />
-
-```json
-{
-  "flexDirection": "column-reverse",
-  "justifyContent": "space-between",
-  "alignItems": "center"
-}
-```
-
-#### Bottom to Top, aligned Right
-
-```js
-<Col.BTR x>
-  <Red />
-  <Green />
-  <Blue />
-</Col.BTR>
-```
-
-<img src="images/col-bottom-top-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "column-reverse",
-  "justifyContent": "space-between",
-  "alignItems": "flex-end"
-}
-```
+<img src="images/col-top-bottom-left.png" width="300" /> <img src="images/col-top-bottom.png" width="300" /> <img src="images/col-top-bottom-right.png" width="300" />
+<img src="images/col-bottom-top-left.png" width="300" /> <img src="images/col-bottom-top.png" width="300" /> <img src="images/col-bottom-top-right.png" width="300" />
 
 ### `Row`
 
@@ -460,306 +183,61 @@ import { Row } from 'react-native-col';
 </Row>;
 ```
 
-#### Top Left
+```js
+// Top Left
+<Row.TL /> // Equivalent to <Row />
+
+// Top
+<Row.T />
+
+// Top Right
+<Row.TR />
+
+// Left
+<Row.L />
+
+// Center
+<Row.C />
+
+// Right
+<Row.R />
+
+// Bottom Left
+<Row.BL />
+
+// Bottom
+<Row.B />
+
+// Bottom Right
+<Row.BR />
+```
+
+<img src="images/row-top-left.png" width="300" /> <img src="images/row-top.png" width="300" /> <img src="images/row-top-right.png" width="300" />
+<img src="images/row-left.png" width="300" /> <img src="images/row-center.png" width="300" /> <img src="images/row-right.png" width="300" />
+<img src="images/row-bottom-left.png" width="300" /> <img src="images/row-bottom.png" width="300" /> <img src="images/row-bottom-right.png" width="300" />
 
 ```js
-// Equivalent to <Row />
-<Row.TL x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.TL>
+// Left to Right, aligned Top
+<Row.LRT />
+
+// Left to Right
+<Row.LR />
+
+// Left to Right, aligned Bottom
+<Row.LRB />
+
+// Right to Left, aligned Top
+<Row.RLT />
+
+// Right to Left
+<Row.RL />
+
+// Right to Left, aligned Bottom
+<Row.RLB />
 ```
 
-<img src="images/row-top-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "flex-start",
-  "alignItems": "flex-start"
-}
-```
-
-#### Top
-
-```js
-<Row.T x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.T>
-```
-
-<img src="images/row-top.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "center",
-  "alignItems": "flex-start"
-}
-```
-
-#### Top Right
-
-```js
-<Row.TR x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.TR>
-```
-
-<img src="images/row-top-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "flex-end",
-  "alignItems": "flex-start"
-}
-```
-
-#### Left
-
-```js
-<Row.L x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.L>
-```
-
-<img src="images/row-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "flex-start",
-  "alignItems": "center"
-}
-```
-
-#### Center
-
-```js
-<Row.C x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.C>
-```
-
-<img src="images/row-center.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "center",
-  "alignItems": "center"
-}
-```
-
-#### Right
-
-```js
-<Row.R x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.R>
-```
-
-<img src="images/row-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "flex-end",
-  "alignItems": "center"
-}
-```
-
-#### Bottom Left
-
-```js
-<Row.BL x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.BL>
-```
-
-<img src="images/row-bottom-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "flex-start",
-  "alignItems": "flex-end"
-}
-```
-
-#### Bottom
-
-```js
-<Row.B x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.B>
-```
-
-<img src="images/row-bottom.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "center",
-  "alignItems": "flex-end"
-}
-```
-
-#### Bottom Right
-
-```js
-<Row.BR x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.BR>
-```
-
-<img src="images/row-bottom-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "flex-end",
-  "alignItems": "flex-end"
-}
-```
-
-#### Left to Right, aligned Top
-
-```js
-<Row.LRT x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.LRT>
-```
-
-<img src="images/row-left-right-top.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "space-between",
-  "alignItems": "flex-start"
-}
-```
-
-#### Left to Right
-
-```js
-<Row.LR x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.LR>
-```
-
-<img src="images/row-left-right.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "space-between",
-  "alignItems": "center"
-}
-```
-
-#### Left to Right, aligned Bottom
-
-```js
-<Row.LRB x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.LRB>
-```
-
-<img src="images/row-left-right-bottom.png" width="320" />
-
-```json
-{
-  "flexDirection": "row",
-  "justifyContent": "space-between",
-  "alignItems": "flex-end"
-}
-```
-
-#### Right to Left, aligned Top
-
-```js
-<Row.RLT x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.RLT>
-```
-
-<img src="images/row-right-left-top.png" width="320" />
-
-```json
-{
-  "flexDirection": "row-reverse",
-  "justifyContent": "space-between",
-  "alignItems": "flex-start"
-}
-```
-
-#### Right to Left
-
-```js
-<Row.RL x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.RL>
-```
-
-<img src="images/row-right-left.png" width="320" />
-
-```json
-{
-  "flexDirection": "row-reverse",
-  "justifyContent": "space-between",
-  "alignItems": "center"
-}
-```
-
-#### Right to Left, aligned Bottom
-
-```js
-<Row.RLB x>
-  <Red />
-  <Green />
-  <Blue />
-</Row.RLB>
-```
-
-<img src="images/row-right-left-bottom.png" width="320" />
-
-```json
-{
-  "flexDirection": "row-reverse",
-  "justifyContent": "space-between",
-  "alignItems": "flex-end"
-}
-```
+<img src="images/row-left-right-top.png" width="300" /> <img src="images/row-left-right.png" width="300" /> <img src="images/row-left-right-bottom.png" width="300" />
+<img src="images/row-right-left-top.png" width="300" /> <img src="images/row-right-left.png" width="300" /> <img src="images/row-right-left-bottom.png" width="300" />
 
 ### Spacing
 
