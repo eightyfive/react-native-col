@@ -31,13 +31,50 @@ function partitionObject(obj, filterFn) {
 }
 
 function getStyles(aliases, sizes) {
-  return o.entries(aliases).map(([alias, index]) => {
-    const cacheKey = `${alias}${index}`;
+  return o.entries(aliases).map(([alias, val]) => {
+    let indexes;
+
+    if (Array.isArray(val)) {
+      indexes = val;
+    } else if (typeof val === 'string') {
+      indexes = val.split(' ');
+    } else {
+      // Number
+      indexes = [val];
+    }
+
+    const cacheKey = `${alias}${indexes.join('')}`;
 
     let cached = cache.get(cacheKey);
 
     if (!cached) {
-      cached = { [byAliases[alias]]: sizes[index] };
+      const unalias = byAliases[alias];
+
+      console.log(indexes, unalias, indexes.length === 1, sizes[indexes[0]]);
+
+      if (indexes.length === 1) {
+        cached = {
+          [unalias]: sizes[indexes[0]],
+        };
+      } else if (indexes.length === 2) {
+        cached = {
+          [`${unalias}Vertical`]: sizes[indexes[0]],
+          [`${unalias}Horizontal`]: sizes[indexes[1]],
+        };
+      } else if (indexes.length === 3) {
+        cached = {
+          [`${unalias}Top`]: sizes[indexes[0]],
+          [`${unalias}Horizontal`]: sizes[indexes[1]],
+          [`${unalias}Bottom`]: sizes[indexes[2]],
+        };
+      } else if (indexes.length === 4) {
+        cached = {
+          [`${unalias}Top`]: sizes[indexes[0]],
+          [`${unalias}Right`]: sizes[indexes[1]],
+          [`${unalias}Bottom`]: sizes[indexes[2]],
+          [`${unalias}Left`]: sizes[indexes[3]],
+        };
+      }
 
       cache.set(cacheKey, cached);
     }
