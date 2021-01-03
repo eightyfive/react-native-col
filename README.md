@@ -127,7 +127,7 @@ import Col from 'react-native-col';
 <Col.TR />
 ```
 
-<img src="images/col-top-left.png" width="300" /> <img src="images/col-top.png" width="300" /> <img src="images/col-top-right.png" width="300" />
+<img src="images/col-top-left.png" width="250" /> <img src="images/col-top.png" width="250" /> <img src="images/col-top-right.png" width="250" />
 
 ```js
 // Left
@@ -140,7 +140,7 @@ import Col from 'react-native-col';
 <Col.R />
 ```
 
-<img src="images/col-left.png" width="300" /> <img src="images/col-center.png" width="300" /> <img src="images/col-right.png" width="300" />
+<img src="images/col-left.png" width="250" /> <img src="images/col-center.png" width="250" /> <img src="images/col-right.png" width="250" />
 
 ```js
 // Bottom Left
@@ -153,7 +153,7 @@ import Col from 'react-native-col';
 <Col.BR />
 ```
 
-<img src="images/col-bottom-left.png" width="300" /> <img src="images/col-bottom.png" width="300" /> <img src="images/col-bottom-right.png" width="300" />
+<img src="images/col-bottom-left.png" width="250" /> <img src="images/col-bottom.png" width="250" /> <img src="images/col-bottom-right.png" width="250" />
 
 ```js
 // Top to Bottom, aligned Left
@@ -166,7 +166,7 @@ import Col from 'react-native-col';
 <Col.TBR />
 ```
 
-<img src="images/col-top-bottom-left.png" width="300" /> <img src="images/col-top-bottom.png" width="300" /> <img src="images/col-top-bottom-right.png" width="300" />
+<img src="images/col-top-bottom-left.png" width="250" /> <img src="images/col-top-bottom.png" width="250" /> <img src="images/col-top-bottom-right.png" width="250" />
 
 ```js
 
@@ -180,7 +180,7 @@ import Col from 'react-native-col';
 <Col.BTR />
 ```
 
-<img src="images/col-bottom-top-left.png" width="300" /> <img src="images/col-bottom-top.png" width="300" /> <img src="images/col-bottom-top-right.png" width="300" />
+<img src="images/col-bottom-top-left.png" width="250" /> <img src="images/col-bottom-top.png" width="250" /> <img src="images/col-bottom-top-right.png" width="250" />
 
 ### `Row`
 
@@ -205,7 +205,7 @@ import { Row } from 'react-native-col';
 <Row.TR />
 ```
 
-<img src="images/row-top-left.png" width="300" /> <img src="images/row-top.png" width="300" /> <img src="images/row-top-right.png" width="300" />
+<img src="images/row-top-left.png" width="250" /> <img src="images/row-top.png" width="250" /> <img src="images/row-top-right.png" width="250" />
 
 ```js
 // Left
@@ -218,7 +218,7 @@ import { Row } from 'react-native-col';
 <Row.R />
 ```
 
-<img src="images/row-left.png" width="300" /> <img src="images/row-center.png" width="300" /> <img src="images/row-right.png" width="300" />
+<img src="images/row-left.png" width="250" /> <img src="images/row-center.png" width="250" /> <img src="images/row-right.png" width="250" />
 
 ```js
 // Bottom Left
@@ -231,7 +231,7 @@ import { Row } from 'react-native-col';
 <Row.BR />
 ```
 
-<img src="images/row-bottom-left.png" width="300" /> <img src="images/row-bottom.png" width="300" /> <img src="images/row-bottom-right.png" width="300" />
+<img src="images/row-bottom-left.png" width="250" /> <img src="images/row-bottom.png" width="250" /> <img src="images/row-bottom-right.png" width="250" />
 
 ```js
 // Left to Right, aligned Top
@@ -244,7 +244,7 @@ import { Row } from 'react-native-col';
 <Row.LRB />
 ```
 
-<img src="images/row-left-right-top.png" width="300" /> <img src="images/row-left-right.png" width="300" /> <img src="images/row-left-right-bottom.png" width="300" />
+<img src="images/row-left-right-top.png" width="250" /> <img src="images/row-left-right.png" width="250" /> <img src="images/row-left-right-bottom.png" width="250" />
 
 ```js
 // Right to Left, aligned Top
@@ -257,7 +257,7 @@ import { Row } from 'react-native-col';
 <Row.RLB />
 ```
 
-<img src="images/row-right-left-top.png" width="300" /> <img src="images/row-right-left.png" width="300" /> <img src="images/row-right-left-bottom.png" width="300" />
+<img src="images/row-right-left-top.png" width="250" /> <img src="images/row-right-left.png" width="250" /> <img src="images/row-right-left-bottom.png" width="250" />
 
 ### Spacing
 
