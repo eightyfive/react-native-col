@@ -16,10 +16,8 @@ Quick & concise [`react-native`](https://github.com/facebook/react-native) Flexb
 - [Basic Usage](#basic-usage)
 - [Documentation](#documentation)
   - [The `x` property](#the-x-property)
-  - [Demo](#demo)
   - [`Col`](#col)
   - [`Row`](#row)
-  - [Spacing](#spacing)
 - [Credits](#credits)
 
 ## Installation
@@ -74,7 +72,7 @@ import Col, { Row } from 'react-native-col';
 <Row />
 ```
 
-### Demo
+#### Demo
 
 All demos will use these 3 RGB squares:
 
@@ -258,56 +256,6 @@ import { Row } from 'react-native-col';
 ```
 
 <img src="images/row-right-left-top.png" width="250" /> <img src="images/row-right-left.png" width="250" /> <img src="images/row-right-left-bottom.png" width="250" />
-
-### Spacing
-
-#### Sizes definition
-
-By default `react-native-col` does not handle spacing (a.k.a `margin` + `padding`).
-
-If you wish to make use of this powerful feature, you must first specify your set of sizes like so:
-
-```js
-import View from 'react-native-col/view';
-
-View.sizes = [0, 10, 20, 40, 80, 160];
-```
-
-This way you define 6 sizes identifiable by their index: 0 is `0`, 1 is `10`, ... 5 is `160`.
-
-#### Shorthands
-
-Once your sizes are defined, you can apply quick, concise & consistent `margin` and `padding` styles:
-
-```js
-import { Row } from 'react-native-col';
-
-<Row m="4" />
-// --> { margin: 80 }
-
-<Row pt="3" />
-// --> { paddingTop: 40 }
-
-<Row mv="5" />
-// --> { marginVertical: 160 }
-
-<Row ph="1" />
-// --> { paddingHorizontal: 10 }
-```
-
-It's also possible to specify `margin` and `padding` properties with an array shorthand notation (CSS-like):
-
-```js
-// All equivalent:
-<Row m="3 2 3 2" />
-<Row m={[3, 2, 3, 2]} />
-<Row m="3 2" />
-<Row m={[3, 2]} />
-<Row mv="3" mh="2" />
-<Row mv={3} mh={2} />
-<Row mt="3" mb="3" ml="2" mr="2" />
-<Row mt={3} mb={3} ml={2} mr={2} />
-```
 
 ## Credits
 
