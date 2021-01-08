@@ -42,3 +42,17 @@ Row.X = makeView([$row, $f1]);
 o.entries($.Row).forEach(([position, style]) => {
   Row.X[position] = makeView([style, $f1]);
 });
+
+// X
+export const X = {};
+
+o.entries($.X).forEach(([position, style]) => {
+  X[position] = makeView([style]);
+});
+
+// Y
+export const Y = {};
+
+o.entries($.Y).forEach(([position, style]) => {
+  X[position] = makeView([style]);
+});

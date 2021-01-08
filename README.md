@@ -270,9 +270,45 @@ All variations are repeated:
 // ...
 ```
 
+> _Note_: The "X" stands for "eXpand".
+
 ### `Row.X`
 
 Same as `Col.X`.
+
+### `X`
+
+The `<X />` component is a variation of the `Row` component with `{ alignItems: 'stretch' }`.
+
+```js
+<X.L style={{ flex: 1 }}>
+  <Red />
+  <Green />
+  <Blue />
+</X.L>
+
+<X.C />
+<X.R />
+```
+
+<img src="images/row-top-left.png" width="250" /> <img src="images/row-top.png" width="250" /> <img src="images/row-top-right.png" width="250" />
+
+### `Y`
+
+The `<Y />` component is a variation of the `Col` component with `{ alignItems: 'stretch' }`.
+
+```js
+<Y.T style={{ flex: 1 }}>
+  <Red />
+  <Green />
+  <Blue />
+</Y.T>
+
+<Y.C />
+<Y.B />
+```
+
+<img src="images/row-top-left.png" width="250" /> <img src="images/row-top.png" width="250" /> <img src="images/row-top-right.png" width="250" />
 
 ## Credits
 

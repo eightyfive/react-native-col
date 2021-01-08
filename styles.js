@@ -23,39 +23,33 @@ o.entries(dials).forEach(([position, num]) => {
 });
 
 Col.TBL = {
-  ...style,
   ...dial('column', 1),
   justifyContent: 'space-between',
 };
 
 Col.TB = {
-  ...style,
   ...dial('column', 2),
   justifyContent: 'space-between',
 };
 
 Col.TBR = {
-  ...style,
   ...dial('column', 3),
   justifyContent: 'space-between',
 };
 
 Col.BTL = {
-  ...style,
   ...dial('column', 1),
   flexDirection: 'column-reverse',
   justifyContent: 'space-between',
 };
 
 Col.BT = {
-  ...style,
   ...dial('column', 2),
   flexDirection: 'column-reverse',
   justifyContent: 'space-between',
 };
 
 Col.BTR = {
-  ...style,
   ...dial('column', 3),
   flexDirection: 'column-reverse',
   justifyContent: 'space-between',
@@ -70,42 +64,68 @@ o.entries(dials).forEach(([position, num]) => {
 });
 
 Row.LRT = {
-  ...style,
   ...dial('row', 1),
   justifyContent: 'space-between',
 };
 
 Row.LR = {
-  ...style,
   ...dial('row', 4),
   justifyContent: 'space-between',
 };
 
 Row.LRB = {
-  ...style,
   ...dial('row', 7),
   justifyContent: 'space-between',
 };
 
 Row.RLT = {
-  ...style,
   ...dial('row', 1),
   flexDirection: 'row-reverse',
   justifyContent: 'space-between',
 };
 
 Row.RL = {
-  ...style,
   ...dial('row', 4),
   flexDirection: 'row-reverse',
   justifyContent: 'space-between',
 };
 
 Row.RLB = {
-  ...style,
   ...dial('row', 7),
   flexDirection: 'row-reverse',
   justifyContent: 'space-between',
 };
 
-export default { Col, Row };
+// X
+X.L = {
+  ...dial('row', 1),
+  alignItems: 'stretch',
+};
+
+X.C = {
+  ...dial('row', 2),
+  alignItems: 'stretch',
+};
+
+X.R = {
+  ...dial('row', 3),
+  alignItems: 'stretch',
+};
+
+// X
+Y.T = {
+  ...dial('col', 1),
+  alignItems: 'stretch',
+};
+
+Y.C = {
+  ...dial('col', 4),
+  alignItems: 'stretch',
+};
+
+Y.B = {
+  ...dial('col', 7),
+  alignItems: 'stretch',
+};
+
+export default { Col, Row, X, Y };
