@@ -14,90 +14,110 @@ const dials = {
   BR: 9,
 };
 
-/**
- * Col
- */
-const Col = {};
+function makeCols(style = {}) {
+  const bag = {};
 
-// TL --> BR
-o.entries(dials).forEach(([position, num]) => {
-  Col[position] = dial('column', num);
-});
+  // TL --> BR
+  o.entries(dials).forEach(([position, num]) => {
+    bag[position] = dial('column', num);
+  });
 
-Col.TBL = {
-  ...dial('column', 1),
-  justifyContent: 'space-between',
-};
+  bag.TBL = {
+    ...style,
+    ...dial('column', 1),
+    justifyContent: 'space-between',
+  };
 
-Col.TB = {
-  ...dial('column', 2),
-  justifyContent: 'space-between',
-};
+  bag.TB = {
+    ...style,
+    ...dial('column', 2),
+    justifyContent: 'space-between',
+  };
 
-Col.TBR = {
-  ...dial('column', 3),
-  justifyContent: 'space-between',
-};
+  bag.TBR = {
+    ...style,
+    ...dial('column', 3),
+    justifyContent: 'space-between',
+  };
 
-Col.BTL = {
-  ...dial('column', 1),
-  flexDirection: 'column-reverse',
-  justifyContent: 'space-between',
-};
+  bag.BTL = {
+    ...style,
+    ...dial('column', 1),
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+  };
 
-Col.BT = {
-  ...dial('column', 2),
-  flexDirection: 'column-reverse',
-  justifyContent: 'space-between',
-};
+  bag.BT = {
+    ...style,
+    ...dial('column', 2),
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+  };
 
-Col.BTR = {
-  ...dial('column', 3),
-  flexDirection: 'column-reverse',
-  justifyContent: 'space-between',
-};
+  bag.BTR = {
+    ...style,
+    ...dial('column', 3),
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+  };
 
-/**
- * Row
- */
-const Row = {};
+  return bag;
+}
 
-// TL --> BR
-o.entries(dials).forEach(([position, num]) => {
-  Row[position] = dial('row', num);
-});
+function makeRows(style = {}) {
+  const bag = {};
 
-Row.LRT = {
-  ...dial('row', 1),
-  justifyContent: 'space-between',
-};
+  // TL --> BR
+  o.entries(dials).forEach(([position, num]) => {
+    bag[position] = dial('row', num);
+  });
 
-Row.LR = {
-  ...dial('row', 4),
-  justifyContent: 'space-between',
-};
+  bag.LRT = {
+    ...style,
+    ...dial('row', 1),
+    justifyContent: 'space-between',
+  };
 
-Row.LRB = {
-  ...dial('row', 7),
-  justifyContent: 'space-between',
-};
+  bag.LR = {
+    ...style,
+    ...dial('row', 4),
+    justifyContent: 'space-between',
+  };
 
-Row.RLT = {
-  ...dial('row', 1),
-  flexDirection: 'row-reverse',
-  justifyContent: 'space-between',
-};
+  bag.LRB = {
+    ...style,
+    ...dial('row', 7),
+    justifyContent: 'space-between',
+  };
 
-Row.RL = {
-  ...dial('row', 4),
-  flexDirection: 'row-reverse',
-  justifyContent: 'space-between',
-};
+  bag.RLT = {
+    ...style,
+    ...dial('row', 1),
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+  };
 
-Row.RLB = {
-  ...dial('row', 7),
-  flexDirection: 'row-reverse',
-  justifyContent: 'space-between',
-};
+  bag.RL = {
+    ...style,
+    ...dial('row', 4),
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+  };
 
-export default { Col, Row };
+  bag.RLB = {
+    ...style,
+    ...dial('row', 7),
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+  };
+
+  return bag;
+}
+
+const Col = makeCols();
+const ColX = makeCols({ flex: 1 });
+
+const Row = makeRows();
+const RowX = makeRows({ flex: 1 });
+
+export default { Col, ColX, Row, RowX };
