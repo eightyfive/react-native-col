@@ -253,7 +253,7 @@ The `<Hor />` (Horizontal) component is a variation of the `Row` component with 
 <Hor.R />
 ```
 
-<img src="images/hor-l.png" width="250" /> <img src="images/hor-c.png" width="250" /> <img src="images/hor-b.png" width="250" />
+<img src="images/hor-l.png" width="250" /> <img src="images/hor-c.png" width="250" /> <img src="images/hor-r.png" width="250" />
 
 ### `Ver`
 
