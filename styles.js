@@ -96,36 +96,40 @@ Row.RLB = {
   justifyContent: 'space-between',
 };
 
-// X
-X.L = {
+// Hor
+const Hor = {};
+
+Hor.L = {
   ...dial('row', 1),
   alignItems: 'stretch',
 };
 
-X.C = {
+Hor.C = {
   ...dial('row', 2),
   alignItems: 'stretch',
 };
 
-X.R = {
+Hor.R = {
   ...dial('row', 3),
   alignItems: 'stretch',
 };
 
-// X
-Y.T = {
-  ...dial('col', 1),
+// Ver
+const Ver = {};
+
+Ver.T = {
+  ...dial('column', 1),
   alignItems: 'stretch',
 };
 
-Y.C = {
-  ...dial('col', 4),
+Ver.C = {
+  ...dial('column', 4),
   alignItems: 'stretch',
 };
 
-Y.B = {
-  ...dial('col', 7),
+Ver.B = {
+  ...dial('column', 7),
   alignItems: 'stretch',
 };
 
-export default { Col, Row, X, Y };
+export default { Col, Hor, Row, Ver };

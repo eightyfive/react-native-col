@@ -18,14 +18,10 @@ const Col = makeView([$col]);
 
 o.entries($.Col).forEach(([position, style]) => {
   Col[position] = makeView([style]);
+  Col[position].X = makeView([style, $f1]);
 });
 
-// Col.X
 Col.X = makeView([$col, $f1]);
-
-o.entries($.Row).forEach(([position, style]) => {
-  Col.X[position] = makeView([style, $f1]);
-});
 
 export default Col;
 
@@ -34,25 +30,23 @@ export const Row = makeView([$row]);
 
 o.entries($.Row).forEach(([position, style]) => {
   Row[position] = makeView([style]);
+  Row[position].X = makeView([style, $f1]);
 });
 
-// Row.X
 Row.X = makeView([$row, $f1]);
 
-o.entries($.Row).forEach(([position, style]) => {
-  Row.X[position] = makeView([style, $f1]);
+// Hor
+export const Hor = {};
+
+o.entries($.Hor).forEach(([position, style]) => {
+  Hor[position] = makeView([style]);
+  Hor[position].X = makeView([style, $f1]);
 });
 
-// X
-export const X = {};
+// Ver
+export const Ver = {};
 
-o.entries($.X).forEach(([position, style]) => {
-  X[position] = makeView([style]);
-});
-
-// Y
-export const Y = {};
-
-o.entries($.Y).forEach(([position, style]) => {
-  X[position] = makeView([style]);
+o.entries($.Ver).forEach(([position, style]) => {
+  Ver[position] = makeView([style]);
+  Ver[position].X = makeView([style, $f1]);
 });

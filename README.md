@@ -17,8 +17,9 @@ Quick & concise [`react-native`](https://github.com/facebook/react-native) Flexb
 - [Documentation](#documentation)
   - [`Col`](#col)
   - [`Row`](#row)
-  - [`Col.X`](#colx)
-  - [`Row.X`](#rowx)
+  - [`Hor`](#h)
+  - [`Ver`](#v)
+  - [The `X` suffix](#the-x-suffix)
 - [Credits](#credits)
 
 ## Installation
@@ -61,8 +62,8 @@ import Col from 'react-native-col';
 
 const $ = {
   sq: {
-    width: 50,
-    height: 50,
+    minWidth: 50,
+    minHeight: 50,
   },
   r: {
     backgroundColor: 'red',
@@ -237,7 +238,41 @@ import { Row } from 'react-native-col';
 
 <img src="images/row-right-left-top.png" width="250" /> <img src="images/row-right-left.png" width="250" /> <img src="images/row-right-left-bottom.png" width="250" />
 
-### `Col.X`
+### `Hor`
+
+The `<Hor />` (Horizontal) component is a variation of the `Row` component with `{ alignItems: 'stretch' }`.
+
+```js
+<Hor.L style={{ flex: 1 }}>
+  <Red />
+  <Green />
+  <Blue />
+</Hor.L>
+
+<Hor.C />
+<Hor.R />
+```
+
+<img src="images/hor-l.png" width="250" /> <img src="images/hor-c.png" width="250" /> <img src="images/hor-b.png" width="250" />
+
+### `Ver`
+
+The `<Ver />` (Vertical) component is a variation of the `Col` component with `{ alignItems: 'stretch' }`.
+
+```js
+<Ver.T style={{ flex: 1 }}>
+  <Red />
+  <Green />
+  <Blue />
+</Ver.T>
+
+<Ver.C />
+<Ver.B />
+```
+
+<img src="images/ver-t.png" width="250" /> <img src="images/ver-c.png" width="250" /> <img src="images/ver-b.png" width="250" />
+
+### The `X` suffix
 
 Instead of writing:
 
@@ -249,7 +284,7 @@ Instead of writing:
 </Col>
 ```
 
-You could make use of the `X` namespace:
+You could make use of the `X` suffix:
 
 ```js
 <Col.X>
@@ -259,56 +294,30 @@ You could make use of the `X` namespace:
 </Col.X>
 ```
 
-All variations are repeated:
+> _Note_: The "X" suffix stands for "eXpand".
+
+It can be applied to all variations:
 
 ```js
-<Col.X.TL />
-<Col.X.T />
-<Col.X.TR />
-<Col.X.L />
-<Col.X.C />
+<Col.TL.X />
+<Col.T.X />
+<Col.TR.X />
+<Col.L.X />
+<Col.C.X />
 // ...
+
+<Row.TL.X />
+<Row.T.X />
+// ...
+
+<Hor.L.X />
+<Hor.C.X />
+<Hor.R.X />
+
+<Ver.T.X />
+<Ver.C.X />
+<Ver.B.X />
 ```
-
-> _Note_: The "X" stands for "eXpand".
-
-### `Row.X`
-
-Same as `Col.X`.
-
-### `X`
-
-The `<X />` component is a variation of the `Row` component with `{ alignItems: 'stretch' }`.
-
-```js
-<X.L style={{ flex: 1 }}>
-  <Red />
-  <Green />
-  <Blue />
-</X.L>
-
-<X.C />
-<X.R />
-```
-
-<img src="images/row-top-left.png" width="250" /> <img src="images/row-top.png" width="250" /> <img src="images/row-top-right.png" width="250" />
-
-### `Y`
-
-The `<Y />` component is a variation of the `Col` component with `{ alignItems: 'stretch' }`.
-
-```js
-<Y.T style={{ flex: 1 }}>
-  <Red />
-  <Green />
-  <Blue />
-</Y.T>
-
-<Y.C />
-<Y.B />
-```
-
-<img src="images/row-top-left.png" width="250" /> <img src="images/row-top.png" width="250" /> <img src="images/row-top-right.png" width="250" />
 
 ## Credits
 
