@@ -15,9 +15,10 @@ Quick & concise [`react-native`](https://github.com/facebook/react-native) Flexb
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
 - [Documentation](#documentation)
-  - [The `x` property](#the-x-property)
   - [`Col`](#col)
   - [`Row`](#row)
+  - [`Col.X`](#colx)
+  - [`Row.X`](#rowx)
 - [Credits](#credits)
 
 ## Installation
@@ -53,27 +54,6 @@ import { Row } from 'react-native-col';
 
 ## Documentation
 
-### The `x` property
-
-The `x` property is an alias for the `flex` value. It is `1` by default, but you can also specify a [number between `-1..9`](https://reactnative.dev/docs/layout-props#flex):
-
-```js
-import Col, { Row } from 'react-native-col';
-
-<Col x={2} />
-<Row x={-1} />
-
-// Equivalent:
-<Row x />
-<Row x={1} />
-
-// Optional
-<Col />
-<Row />
-```
-
-#### Demo
-
 All demos will use these 3 RGB squares:
 
 ```js
@@ -107,7 +87,7 @@ const Blue = () => <Col style={[$.sq, $.b]} />;
 ```js
 import Col from 'react-native-col';
 
-<Col x>
+<Col style={{ flex: 1 }}>
   <Red />
   <Green />
   <Blue />
@@ -185,7 +165,7 @@ import Col from 'react-native-col';
 ```js
 import { Row } from 'react-native-col';
 
-<Row x>
+<Row style={{ flex: 1 }}>
   <Red />
   <Green />
   <Blue />
@@ -256,6 +236,43 @@ import { Row } from 'react-native-col';
 ```
 
 <img src="images/row-right-left-top.png" width="250" /> <img src="images/row-right-left.png" width="250" /> <img src="images/row-right-left-bottom.png" width="250" />
+
+### `Col.X`
+
+Instead of writing:
+
+```js
+<Col style={{ flex: 1 }}>
+  <Red />
+  <Green />
+  <Blue />
+</Col>
+```
+
+You could make use of the `X` namespace:
+
+```js
+<Col.X>
+  <Red />
+  <Green />
+  <Blue />
+</Col.X>
+```
+
+All variations are repeated:
+
+```js
+<Col.X.TL />
+<Col.X.T />
+<Col.X.TR />
+<Col.X.L />
+<Col.X.C />
+// ...
+```
+
+### `Row.X`
+
+Same as `Col.X`.
 
 ## Credits
 
