@@ -34,19 +34,3 @@ o.entries($.Row).forEach(([position, style]) => {
 });
 
 Row.X = makeView([$row, $f1]);
-
-// Hor
-export const Hor = {};
-
-o.entries($.Hor).forEach(([position, style]) => {
-  Hor[position] = makeView([style]);
-  Hor[position].X = makeView([style, $f1]);
-});
-
-// Ver
-export const Ver = {};
-
-o.entries($.Ver).forEach(([position, style]) => {
-  Ver[position] = makeView([style]);
-  Ver[position].X = makeView([style, $f1]);
-});

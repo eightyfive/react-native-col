@@ -55,6 +55,21 @@ Col.BTR = {
   justifyContent: 'space-between',
 };
 
+Col.LRT = {
+  ...dial('column', 2),
+  alignItems: 'stretch',
+};
+
+Col.LRC = {
+  ...dial('column', 5),
+  alignItems: 'stretch',
+};
+
+Col.LRB = {
+  ...dial('column', 8),
+  alignItems: 'stretch',
+};
+
 // Row
 const Row = {};
 
@@ -96,40 +111,19 @@ Row.RLB = {
   justifyContent: 'space-between',
 };
 
-// Hor
-const Hor = {};
-
-Hor.L = {
-  ...dial('row', 1),
+Row.TBL = {
+  ...dial('row', 4),
   alignItems: 'stretch',
 };
 
-Hor.C = {
-  ...dial('row', 2),
+Row.TBC = {
+  ...dial('row', 5),
   alignItems: 'stretch',
 };
 
-Hor.R = {
-  ...dial('row', 3),
+Row.TBR = {
+  ...dial('row', 6),
   alignItems: 'stretch',
 };
 
-// Ver
-const Ver = {};
-
-Ver.T = {
-  ...dial('column', 1),
-  alignItems: 'stretch',
-};
-
-Ver.C = {
-  ...dial('column', 4),
-  alignItems: 'stretch',
-};
-
-Ver.B = {
-  ...dial('column', 7),
-  alignItems: 'stretch',
-};
-
-export default { Col, Hor, Row, Ver };
+export default { Col, Row };

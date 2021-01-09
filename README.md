@@ -17,8 +17,6 @@ Quick & concise [`react-native`](https://github.com/facebook/react-native) Flexb
 - [Documentation](#documentation)
   - [`Col`](#col)
   - [`Row`](#row)
-  - [`Hor`](#h)
-  - [`Ver`](#v)
   - [The `X` suffix](#the-x-suffix)
 - [Credits](#credits)
 
@@ -148,7 +146,6 @@ import Col from 'react-native-col';
 <img src="images/col-top-bottom-left.png" width="250" /> <img src="images/col-top-bottom.png" width="250" /> <img src="images/col-top-bottom-right.png" width="250" />
 
 ```js
-
 // Bottom to Top, aligned Left
 <Col.BTL />
 
@@ -160,6 +157,19 @@ import Col from 'react-native-col';
 ```
 
 <img src="images/col-bottom-top-left.png" width="250" /> <img src="images/col-bottom-top.png" width="250" /> <img src="images/col-bottom-top-right.png" width="250" />
+
+```js
+// Left-Right, aligned Top
+<Col.LRT />
+
+// Left-Right, aligned Center
+<Col.LRC />
+
+// Left-Right, aligned Bottom
+<Col.LRB />
+```
+
+<img src="images/col-left-right-top.png" width="250" /> <img src="images/col-left-right-center.png" width="250" /> <img src="images/col-left-right-bottom.png" width="250" />
 
 ### `Row`
 
@@ -238,39 +248,18 @@ import { Row } from 'react-native-col';
 
 <img src="images/row-right-left-top.png" width="250" /> <img src="images/row-right-left.png" width="250" /> <img src="images/row-right-left-bottom.png" width="250" />
 
-### `Hor`
-
-The `<Hor />` (Horizontal) component is a variation of the `Row` component with `{ alignItems: 'stretch' }`.
-
 ```js
-<Hor.L style={{ flex: 1 }}>
-  <Red />
-  <Green />
-  <Blue />
-</Hor.L>
+// Top-Bottom, aligned Left
+<Row.TBL />
 
-<Hor.C />
-<Hor.R />
+// Top-Bottom, aligned Center
+<Row.TBC />
+
+// Top-Bottom, aligned Right
+<Row.TBR />
 ```
 
-<img src="images/hor-l.png" width="250" /> <img src="images/hor-c.png" width="250" /> <img src="images/hor-r.png" width="250" />
-
-### `Ver`
-
-The `<Ver />` (Vertical) component is a variation of the `Col` component with `{ alignItems: 'stretch' }`.
-
-```js
-<Ver.T style={{ flex: 1 }}>
-  <Red />
-  <Green />
-  <Blue />
-</Ver.T>
-
-<Ver.C />
-<Ver.B />
-```
-
-<img src="images/ver-t.png" width="250" /> <img src="images/ver-c.png" width="250" /> <img src="images/ver-b.png" width="250" />
+<img src="images/row-top-bottom-left.png" width="250" /> <img src="images/row-top-bottom-center.png" width="250" /> <img src="images/row-top-bottom-right.png" width="250" />
 
 ### The `X` suffix
 
@@ -309,14 +298,6 @@ It can be applied to all variations:
 <Row.TL.X />
 <Row.T.X />
 // ...
-
-<Hor.L.X />
-<Hor.C.X />
-<Hor.R.X />
-
-<Ver.T.X />
-<Ver.C.X />
-<Ver.B.X />
 ```
 
 ## Credits
