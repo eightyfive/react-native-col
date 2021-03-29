@@ -2,10 +2,14 @@
   "name": "react-native-col",
   "version": "1.1.4",
   "description": "Easy React Native Flexbox",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*.js"
+  ],
   "scripts": {
     "test": "jest",
-    "release": "np --no-2fa --no-draft-release"
+    "release": "np --no-2fa --no-draft-release",
+    "build": "npx babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -27,7 +31,9 @@
   "homepage": "https://github.com/eightyfive/react-native-col#readme",
   "peerDependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
     "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-react-jsx": "^7.13.12",
     "@babel/preset-env": "^7.7.7",
     "babel-jest": "^24.9.0",
     "jest": "^26.6.3",
