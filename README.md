@@ -17,7 +17,7 @@ Quick & concise [`react-native`](https://github.com/facebook/react-native) Flexb
 - [Documentation](#documentation)
   - [`Col`](#col)
   - [`Row`](#row)
-  - [The `X` suffix](#the-x-suffix)
+  - [`Col0`, `Col1`, `Row7`... (Flex)](#col0-col1-row7-flex)
 - [Credits](#credits)
 
 ## Installation
@@ -261,9 +261,11 @@ import { Row } from 'react-native-col';
 
 <img src="images/row-top-bottom-left.png" width="250" /> <img src="images/row-top-bottom-center.png" width="250" /> <img src="images/row-top-bottom-right.png" width="250" />
 
-### The `X` suffix
+### `Col0`, `Col1`, `Row7`... (Flex)
 
-Instead of writing:
+The package also exports `Col[0-9]` and `Row[0-9]` views with pre-defined `flex` values.
+
+So instead of writing:
 
 ```js
 <Col style={{ flex: 1 }}>
@@ -273,30 +275,58 @@ Instead of writing:
 </Col>
 ```
 
-You could make use of the `X` suffix:
+You could make use of `Col1`:
 
 ```js
-<Col.X>
+import { Col1 } from 'react-native-col';
+
+<Col1>
   <Red />
   <Green />
   <Blue />
-</Col.X>
+</Col1>;
 ```
 
-> _Note_: The "X" suffix stands for "eXpand".
-
-It can be applied to all variations:
+Here are all possible pre-defined `flex` values:
 
 ```js
-<Col.TL.X />
-<Col.T.X />
-<Col.TR.X />
-<Col.L.X />
-<Col.C.X />
+import {
+  Col0,
+  Col1,
+  Col2,
+  Col3,
+  Col4,
+  Col5,
+  Col6,
+  Col7,
+  Col8,
+  Col9,
+  //
+  Row0,
+  Row1,
+  Row2,
+  Row3,
+  Row4,
+  Row5,
+  Row6,
+  Row7,
+  Row8,
+  Row9,
+} from 'react-native-col';
+```
+
+You can obviously use the positioning shortcuts on them:
+
+```js
+<Col6.TL />
+<Col0.T />
+<Col2.TR />
+<Col9.L />
+<Col4.C />
 // ...
 
-<Row.TL.X />
-<Row.T.X />
+<Row7.TL />
+<Row4.T />
 // ...
 ```
 

@@ -1,7 +1,5 @@
 import dial from './dial';
 
-const o = Object;
-
 const dials = {
   TL: 1,
   T: 2,
@@ -18,7 +16,7 @@ const dials = {
 const Col = {};
 
 // TL --> BR
-o.entries(dials).forEach(([position, num]) => {
+Object.entries(dials).forEach(([position, num]) => {
   Col[position] = dial('column', num);
 });
 
@@ -74,7 +72,7 @@ Col.LRB = {
 const Row = {};
 
 // TL --> BR
-o.entries(dials).forEach(([position, num]) => {
+Object.entries(dials).forEach(([position, num]) => {
   Row[position] = dial('row', num);
 });
 
