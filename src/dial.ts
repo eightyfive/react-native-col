@@ -1,8 +1,11 @@
-export default function getStyle(flexDirection, dial) {
-  if (dial < 1 || dial > 9) {
-    throw new TypeError('`dial` prop must be between 1 and 9');
-  }
+import { ViewStyle } from 'react-native';
 
+type Dial = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+
+export default function getStyle(
+  flexDirection: 'row' | 'column',
+  dial: Dial
+): ViewStyle {
   // Main-axis
   const justifyContent = flexDirection === 'row' ? dialX(dial) : dialY(dial);
 
@@ -16,7 +19,7 @@ export default function getStyle(flexDirection, dial) {
   };
 }
 
-function dialX(dial) {
+function dialX(dial: Dial) {
   if (dial % 3 === 0) return 'flex-end';
 
   if (dial % 3 === 2) return 'center';
@@ -24,7 +27,7 @@ function dialX(dial) {
   return 'flex-start';
 }
 
-function dialY(dial) {
+function dialY(dial: Dial) {
   if (dial > 6) return 'flex-end';
 
   if (dial > 3) return 'center';

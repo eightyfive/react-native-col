@@ -9,9 +9,9 @@
     "src"
   ],
   "scripts": {
+    "build": "rimraf dist && tsc -p .",
     "test": "jest src/",
-    "release": "np",
-    "build": "npx babel src --out-dir dist"
+    "release": "np"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,8 @@
   "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "^28.1.1",
+    "@types/react": "^18.0.12",
+    "@types/react-native": "^0.67.8",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "jest": "^28.1.1",
