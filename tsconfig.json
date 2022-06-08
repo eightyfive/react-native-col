@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es6",
+    "allowJs": false,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "noEmit": false,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+
+    /* Source Map Options */
+    // "sourceRoot": "./",                    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "./",                       /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /* Experimental Options */
+    // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
+    // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "jest.setup.ts",
+    "dist"
+  ],
+
+  "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
+}
