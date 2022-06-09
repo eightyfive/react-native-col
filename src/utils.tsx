@@ -36,7 +36,7 @@ export const $: Record<string, ViewStyle> = {
   f9: { flex: 9 },
 };
 
-export function makeView<Props extends ViewProps = ViewProps>(
+export function createView<Props extends ViewProps = ViewProps>(
   styles: ViewStyle[],
   BaseComponent: ComponentType<any> = View
 ) {
