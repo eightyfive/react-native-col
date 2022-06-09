@@ -1,11 +1,15 @@
-import { FC } from 'react';
+import { FC, ForwardRefExoticComponent } from 'react';
 import { ViewProps } from 'react-native';
 
 import { Col as ColStyles, Row as RowStyles } from './styles';
 import { getKeys, makeView, $ } from './utils';
 
 // Col
-type ColT = Record<keyof typeof ColStyles, FC<ViewProps>> & FC<ViewProps>;
+type ColT = Record<
+  keyof typeof ColStyles,
+  ForwardRefExoticComponent<ViewProps>
+> &
+  ForwardRefExoticComponent<ViewProps>;
 
 // @ts-ignore
 export const Col: ColT = makeView([$.col]);

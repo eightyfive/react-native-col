@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ComponentProps, forwardRef, ReactNode } from 'react';
+import { ComponentType } from 'react';
 import { View, ViewProps, ViewStyle } from 'react-native';
 
 export function getKeys<T>(object: T) {
@@ -35,8 +36,17 @@ export const $: Record<string, ViewStyle> = {
   f9: { flex: 9 },
 };
 
-export function makeView(styles: ViewStyle[]) {
-  return function FlexView({ style, ...rest }: ViewProps) {
-    return <View {...rest} style={[...styles, style]} />;
+export function makeView<Props extends ViewProps = ViewProps>(
+  styles: ViewStyle[],
+  BaseComponent: ComponentType<any> = View
+) {
+  const FlexComponent = forwardRef(({ style, ...rest }: Props, ref) => (
+    <BaseComponent ref={ref} {...rest} style={[...styles, style]} />
+  ));
+
+  type FlexComponentType = typeof FlexComponent;
+
+  return FlexComponent as FlexComponentType & {
+    defaultProps?: Partial<ComponentProps<FlexComponentType>>;
   };
 }
