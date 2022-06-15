@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ComponentType } from 'react';
 import { StyleSheet, View, ViewProps, ViewStyle } from 'react-native';
 import { createCol } from './col';
 import { createRow } from './row';
@@ -76,13 +76,16 @@ const propToStyleName: Record<
   pe: 'paddingEnd',
 };
 
-type SizesT = Record<string, number>;
+type Sizes = Record<string, number>;
 
-type SpacingProps<T extends SizesT> = {
-  [Key in keyof typeof propToStyleName]?: keyof T;
+type SpacingProps<S extends Sizes> = {
+  [Key in keyof typeof propToStyleName]?: keyof S;
 };
 
-export function createBox<T extends SizesT>(sizes: T) {
+export function createBox<S extends Sizes, P extends ViewProps>(
+  sizes: S,
+  BaseComponent: ComponentType<any>
+) {
   return ({
     style: styleProp,
     m,
@@ -105,8 +108,8 @@ export function createBox<T extends SizesT>(sizes: T) {
     ps,
     pe,
     ...rest
-  }: ViewProps & SpacingProps<T>) => {
-    const style = getSpacingStyle<T>(
+  }: P & SpacingProps<S>) => {
+    const style = getSpacingStyle<S>(
       {
         m,
         mt,
@@ -131,15 +134,15 @@ export function createBox<T extends SizesT>(sizes: T) {
       sizes
     );
 
-    return <View {...rest} style={[style, styleProp]} />;
+    return <BaseComponent {...rest} style={[style, styleProp]} />;
   };
 }
 
 const cache = new Map();
 
-function getSpacingStyle<T extends SizesT>(
-  spacingProps: SpacingProps<T>,
-  sizes: T
+function getSpacingStyle<S extends Sizes>(
+  spacingProps: SpacingProps<S>,
+  sizes: S
 ) {
   const cacheKey = JSON.stringify(spacingProps);
 
@@ -163,10 +166,14 @@ function getSpacingStyle<T extends SizesT>(
   return cache.get(cacheKey);
 }
 
-export function createColBox<T extends SizesT>(sizes: T) {
-  return createCol<ViewProps & SpacingProps<T>>(createBox<T>(sizes));
+export function createColBox<S extends Sizes>(sizes: S) {
+  return createCol<ViewProps & SpacingProps<S>>(
+    createBox<S, ViewProps>(sizes, View)
+  );
 }
 
-export function createRowBox<T extends SizesT>(sizes: T) {
-  return createRow<ViewProps & SpacingProps<T>>(createBox<T>(sizes));
+export function createRowBox<S extends Sizes>(sizes: S) {
+  return createRow<ViewProps & SpacingProps<S>>(
+    createBox<S, ViewProps>(sizes, View)
+  );
 }
