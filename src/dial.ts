@@ -2,7 +2,7 @@ import { ViewStyle } from 'react-native';
 
 type Dial = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
-export default function getStyle(
+export function createDialStyle(
   flexDirection: 'row' | 'column',
   dial: Dial
 ): ViewStyle {

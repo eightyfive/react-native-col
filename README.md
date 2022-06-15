@@ -56,7 +56,7 @@ import { Row } from 'react-native-col';
 All demos will use these 3 RGB squares:
 
 ```js
-import Col from 'react-native-col';
+import { Col } from 'react-native-col';
 
 const $ = {
   sq: {
@@ -84,7 +84,7 @@ const Blue = () => <Col style={[$.sq, $.b]} />;
 ### `Col`
 
 ```js
-import Col from 'react-native-col';
+import { Col } from 'react-native-col';
 
 <Col style={{ flex: 1 }}>
   <Red />
@@ -159,13 +159,13 @@ import Col from 'react-native-col';
 <img src="images/col-bottom-top-left.png" width="250" /> <img src="images/col-bottom-top.png" width="250" /> <img src="images/col-bottom-top-right.png" width="250" />
 
 ```js
-// Left-Right, aligned Top
+// Left-Right, justified Top
 <Col.LRT />
 
-// Left-Right, aligned Center
+// Left-Right, justified Center
 <Col.LRC />
 
-// Left-Right, aligned Bottom
+// Left-Right, justified Bottom
 <Col.LRB />
 ```
 
@@ -249,13 +249,13 @@ import { Row } from 'react-native-col';
 <img src="images/row-right-left-top.png" width="250" /> <img src="images/row-right-left.png" width="250" /> <img src="images/row-right-left-bottom.png" width="250" />
 
 ```js
-// Top-Bottom, aligned Left
+// Top-Bottom, justified Left
 <Row.TBL />
 
-// Top-Bottom, aligned Center
+// Top-Bottom, justified Center
 <Row.TBC />
 
-// Top-Bottom, aligned Right
+// Top-Bottom, justified Right
 <Row.TBR />
 ```
 

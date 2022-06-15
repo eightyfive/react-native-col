@@ -1,158 +1,111 @@
-import { ViewStyle } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { createDialStyle } from './dial';
 
-import dial from './dial';
+const col1 = createDialStyle('column', 1);
+const col2 = createDialStyle('column', 2);
+const col3 = createDialStyle('column', 3);
+const col4 = createDialStyle('column', 4);
+const col5 = createDialStyle('column', 5);
+const col6 = createDialStyle('column', 6);
+const col7 = createDialStyle('column', 7);
+const col8 = createDialStyle('column', 8);
+const col9 = createDialStyle('column', 9);
 
-type ColPositions =
-  | 'TL'
-  | 'T'
-  | 'TR'
-  | 'L'
-  | 'C'
-  | 'R'
-  | 'BL'
-  | 'B'
-  | 'BR'
-  | 'TBL'
-  | 'TB'
-  | 'TBR'
-  | 'BTL'
-  | 'BT'
-  | 'BTR'
-  | 'LRT'
-  | 'LRC'
-  | 'LRB';
-
-type ColStyles = Record<ColPositions, ViewStyle>;
-
-// Col
-export const Col: ColStyles = {
-  TL: dial('column', 1),
-  T: dial('column', 2),
-  TR: dial('column', 3),
-  L: dial('column', 4),
-  C: dial('column', 5),
-  R: dial('column', 6),
-  BL: dial('column', 7),
-  B: dial('column', 8),
-  BR: dial('column', 9),
+export const colStyles = StyleSheet.create({
+  col: { flexDirection: 'column' },
   //
-  TBL: {
-    ...dial('column', 1),
-    justifyContent: 'space-between',
-  },
-  TB: {
-    ...dial('column', 2),
-    justifyContent: 'space-between',
-  },
-  TBR: {
-    ...dial('column', 3),
-    justifyContent: 'space-between',
-  },
+  TL: col1,
+  T: col2,
+  TR: col3,
+  L: col4,
+  C: col5,
+  R: col6,
+  BL: col7,
+  B: col8,
+  BR: col9,
+  //
+  TBL: { ...col1, justifyContent: 'space-between' },
+  TB: { ...col2, justifyContent: 'space-between' },
+  TBR: { ...col3, justifyContent: 'space-between' },
   //
   BTL: {
-    ...dial('column', 1),
+    ...col1,
     flexDirection: 'column-reverse',
     justifyContent: 'space-between',
   },
   BT: {
-    ...dial('column', 2),
+    ...col2,
     flexDirection: 'column-reverse',
     justifyContent: 'space-between',
   },
   BTR: {
-    ...dial('column', 3),
+    ...col3,
     flexDirection: 'column-reverse',
     justifyContent: 'space-between',
   },
   //
-  LRT: {
-    ...dial('column', 2),
-    alignItems: 'stretch',
-  },
-  LRC: {
-    ...dial('column', 5),
-    alignItems: 'stretch',
-  },
-  LRB: {
-    ...dial('column', 8),
-    alignItems: 'stretch',
-  },
-};
+  LRT: { ...col2, alignItems: 'stretch' },
+  LRC: { ...col5, alignItems: 'stretch' },
+  LRB: { ...col8, alignItems: 'stretch' },
+});
 
-// Row
+const row1 = createDialStyle('row', 1);
+const row2 = createDialStyle('row', 2);
+const row3 = createDialStyle('row', 3);
+const row4 = createDialStyle('row', 4);
+const row5 = createDialStyle('row', 5);
+const row6 = createDialStyle('row', 6);
+const row7 = createDialStyle('row', 7);
+const row8 = createDialStyle('row', 8);
+const row9 = createDialStyle('row', 9);
 
-type RowPositions =
-  | 'TL'
-  | 'T'
-  | 'TR'
-  | 'L'
-  | 'C'
-  | 'R'
-  | 'BL'
-  | 'B'
-  | 'BR'
-  | 'LRT'
-  | 'LR'
-  | 'LRB'
-  | 'RLT'
-  | 'RL'
-  | 'RLB'
-  | 'TBL'
-  | 'TBC'
-  | 'TBR';
-
-type RowStyles = Record<RowPositions, ViewStyle>;
-
-export const Row: RowStyles = {
-  TL: dial('row', 1),
-  T: dial('row', 2),
-  TR: dial('row', 3),
-  L: dial('row', 4),
-  C: dial('row', 5),
-  R: dial('row', 6),
-  BL: dial('row', 7),
-  B: dial('row', 8),
-  BR: dial('row', 9),
+export const rowStyles = StyleSheet.create({
+  row: { flexDirection: 'row' },
   //
-  LRT: {
-    ...dial('row', 1),
-    justifyContent: 'space-between',
-  },
-  LR: {
-    ...dial('row', 4),
-    justifyContent: 'space-between',
-  },
-  LRB: {
-    ...dial('row', 7),
-    justifyContent: 'space-between',
-  },
+  TL: row1,
+  T: row2,
+  TR: row3,
+  L: row4,
+  C: row5,
+  R: row6,
+  BL: row7,
+  B: row8,
+  BR: row9,
+  //
+  LRT: { ...row1, justifyContent: 'space-between' },
+  LR: { ...row4, justifyContent: 'space-between' },
+  LRB: { ...row7, justifyContent: 'space-between' },
   //
   RLT: {
-    ...dial('row', 1),
+    ...row1,
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
   },
   RL: {
-    ...dial('row', 4),
+    ...row4,
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
   },
   RLB: {
-    ...dial('row', 7),
+    ...row7,
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
   },
   //
-  TBL: {
-    ...dial('row', 4),
-    alignItems: 'stretch',
-  },
-  TBC: {
-    ...dial('row', 5),
-    alignItems: 'stretch',
-  },
-  TBR: {
-    ...dial('row', 6),
-    alignItems: 'stretch',
-  },
-};
+  TBL: { ...row4, alignItems: 'stretch' },
+  TBC: { ...row5, alignItems: 'stretch' },
+  TBR: { ...row6, alignItems: 'stretch' },
+});
+
+export const flexStyles = StyleSheet.create({
+  f0: { flex: 0 },
+  f1: { flex: 1 },
+  f2: { flex: 2 },
+  f3: { flex: 3 },
+  f4: { flex: 4 },
+  f5: { flex: 5 },
+  f6: { flex: 6 },
+  f7: { flex: 7 },
+  f8: { flex: 8 },
+  f9: { flex: 9 },
+});
