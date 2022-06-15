@@ -3,6 +3,7 @@
   "version": "2.0.0-2",
   "description": "Easy React Native Flexbox",
   "browser": "dist/index.js",
+  "react-native": "src/index.tsx",
   "main": "src/index.tsx",
   "files": [
     "dist",
