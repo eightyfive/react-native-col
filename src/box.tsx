@@ -1,5 +1,11 @@
 import React, { ComponentType } from 'react';
-import { StyleSheet, View, ViewProps, ViewStyle } from 'react-native';
+import {
+  StyleProp,
+  StyleSheet,
+  View,
+  ViewProps,
+  ViewStyle,
+} from 'react-native';
 import { createCol } from './col';
 import { createRow } from './row';
 
@@ -82,7 +88,11 @@ type SpacingProps<S extends Sizes> = {
   [Key in keyof typeof propToStyleName]?: keyof S;
 };
 
-export function createBox<S extends Sizes, P extends ViewProps>(
+type Props = {
+  style?: StyleProp<ViewStyle>;
+};
+
+export function createBox<S extends Sizes, P extends Props>(
   sizes: S,
   BaseComponent: ComponentType<any>
 ) {
