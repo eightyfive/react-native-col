@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, ViewProps } from 'react-native';
 
 import { flexStyles as $ } from './styles';
