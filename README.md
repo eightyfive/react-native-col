@@ -1,4 +1,4 @@
-# react-native-col
+# `react-native-col`
 
 Flexbox made easy & semantic
 
@@ -88,7 +88,7 @@ const Green = () => <View style={$.g} />;
 const Blue = () => <View style={$.b} />;
 ```
 
-Also assume that all the `Col` and `Row` containers in demos, are `{ flex: 1 }`. Which are redacted for clarity.
+Also assume that all `Col` and `Row` containers in demos, are `{ flex: 1 }`. Which are redacted for clarity.
 
 ### `Col`
 
@@ -615,7 +615,7 @@ createCol<T extends ViewProps>(BaseComponent: ComponentType<any>)
 createRow<T extends ViewProps>(BaseComponent: ComponentType<any>)
 ```
 
-Utility functions to export all positioning shortcuts on your `BaseComponent` of choice.
+Utility functions to generate all positioning shortcuts based on your `BaseComponent` of choice.
 
 Works great with [`react-native-themesheet`](https://github.com/eightyfive/react-native-themesheet) for example:
 
@@ -687,7 +687,7 @@ dial('row', 8); // --> row direction, justified center, aligned bottom
 // Etc
 ```
 
-### (col|row|flex)Styles
+### `(col|row|flex)Styles`
 
 All react-native `StyleSheet` styles used by the library are re-exported:
 
