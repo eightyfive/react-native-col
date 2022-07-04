@@ -1,6 +1,6 @@
 {
   "name": "react-native-col",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Flexbox made easy & semantic",
   "browser": "dist/index.js",
   "react-native": "src/index.tsx",
