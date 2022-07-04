@@ -5,7 +5,6 @@ import { flexStyles as $ } from './styles';
 import { createCol } from './col';
 import { createRow } from './row';
 
-export * from './box';
 export * from './col';
 export * from './dial';
 export * from './row';
