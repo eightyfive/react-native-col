@@ -625,13 +625,13 @@ Works great with [`react-native-themesheet`](https://github.com/eightyfive/react
 ```ts
 import { createTheme } from 'react-native-themesheet';
 
-// src/view/theme.ts
+// src/lib/theme.ts
 export const { createBox } = createTheme(
   { primary: '#ff00dd' },
   { s: 4, m: 8, l: 16, xl: 32 }
 );
 
-// src/views/lib.ts
+// src/lib/index.ts
 import { View } from 'react-native';
 import { createCol } from 'react-native-col';
 
@@ -643,8 +643,8 @@ export const Col = createCol(Box);
 
 export const Row = createRow(Box);
 
-// src/views/home.tsx
-import { Col, Row } from './lib';
+// src/screens/home.tsx
+import { Col, Row } from '../lib';
 
 export function Home() {
   return (
