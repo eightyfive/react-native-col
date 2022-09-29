@@ -18,6 +18,9 @@ Flexbox made easy & semantic
   - [`Col`](#col)
   - [`Row`](#row)
   - [`Col0`, `Col1`, `Row7`... (Flex)](#col0-col1-row7-flex)
+  - [`create(Col|Row)`](#createcolrow)
+  - [`createDialStyle`](#createdialstyle)
+  - [`(col|row|flex)Styles`](#colrowflexstyles)
 - [Credits](#credits)
 
 ## Install
