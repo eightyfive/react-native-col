@@ -9,7 +9,7 @@
     "rootDir": "./src",
     "removeComments": true,
     "noEmit": false,
-    "jsx": "react-native",
+    "jsx": "react",
 
     /* Strict Type-Checking Options */
     "strict": true,
